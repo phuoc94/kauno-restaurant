@@ -1,0 +1,28 @@
+{
+  "main": [
+    {
+      "title": "Spring roll 2kpl",
+      "price": 13.5,
+      "description": "Valise: Katkarapu / Lohi / Tofu- avokado Hoisin-maapähkinäkastike tai mietochilikalakastike",
+      "featured": "true"
+    },
+    {
+      "title": "Lohi tai Tofu riisikulho",
+      "price": 13.5,
+      "description": "Lohi (sashimi/ puolikypsä/ kypsä), sushiriisi, avokado, salaatti, sushi-inkivääri, edamame, wakame ja majonessi",
+      "featured": "true"
+    },
+    {
+      "title": "Vermicelli Nuudeli Salaatti",
+      "price": 11.5,
+      "description": "Vaihtoehto: Katkarapu / Kanavarta / Luomu Tofu Marinoitua daikon ja porkkana, paistettu salottisipuli, paahdettu maapähkinä, mietochilikalakastike tai hoisin-maapähkinäkastike",
+      "featured": "true"
+    },
+    {
+      "title": "Pho-keitto",
+      "price": 10.5,
+      "description": "Naudanliha tai kana tai tofu riisi nuudeli, lihaliemi",
+      "featured": "true"
+    }
+  ]
+}

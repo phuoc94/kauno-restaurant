@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hero {
+  background-color: #f8f6f1;
+  height: 90vh;
+}
+.footer {
+  background-color: #4e603e;
+  color: #e6d3bc;
+}
+
+.dashed-bottom {
+  border-bottom: 1px dashed #662c0af4;
+}
