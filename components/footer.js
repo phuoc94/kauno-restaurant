@@ -3,7 +3,7 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { AiOutlineFacebook, AiOutlineInstagram } from 'react-icons/ai';
 import Image from 'next/image';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/stickers.svg';
 
 const Footer = () => {
   return (

@@ -1,4 +1,4 @@
-import { Container, Form, Row, Col } from 'react-bootstrap';
+import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 
 const Reservation = () => {
   return (
@@ -49,6 +49,11 @@ const Reservation = () => {
               style={{ height: '100px' }}
             />
           </Form.Group>
+        </Row>
+        <Row className="mt-4">
+          <Col className="d-flex justify-content-center">
+            <Button variant="success">Book A Table</Button>
+          </Col>
         </Row>
       </Form>
     </Container>
