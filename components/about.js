@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 
 const AboutSection = () => {
   return (
-    <Container fluid className="hero">
+    <Container fluid className="vh-100 bg-culture">
       <Row className="h-100 mt-5">
         <Col md={5} />
         <Col className="text-center d-flex align-items-center">

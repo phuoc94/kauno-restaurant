@@ -10,7 +10,11 @@ const MenuSection = () => {
         <Row>
           <Col>
             <div className="section-heading text-center mt-5">
-              <Typography variant="h2" component="h2">
+              <Typography
+                variant="h2"
+                component="h2"
+                className="font-classique-saigon color-primary"
+              >
                 Our Menu
               </Typography>
               <div className="line-dec"></div>

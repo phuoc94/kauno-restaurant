@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@font-face {
+  font-family: 'ClassiqueSaigon';
+  scr: url('../public/fonts/ClassiqueSaigon.otf');
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat' !important;
 }
 
 a {
@@ -16,13 +21,29 @@ a {
   box-sizing: border-box;
 }
 
-.hero {
-  background-color: #f8f6f1;
-  height: 90vh;
+.w-60 {
+  width: 60%;
+}
+
+.hero-text {
+  font-size: 3rem;
+  color: #2b2b2b;
 }
 .footer {
   background-color: #4e603e;
   color: #e6d3bc;
+}
+
+.bg-culture {
+  background-color: #f8f6f1;
+}
+
+.font-classique-saigon {
+  font-family: 'ClassiqueSaigon';
+}
+
+.color-primary {
+  color: #4e603e;
 }
 
 .button-primary {
@@ -61,6 +82,20 @@ a {
   font-weight: 400 !important;
 }
 
-. .dashed-bottom {
+.dashed-bottom {
   border-bottom: 1px dashed #662c0af4;
+}
+
+.hero {
+  height: 100vh;
+  background-color: #f8f6f1;
+  background-image: url('../assets/HeroWebsite.png');
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    background-image: url('../assets/HeroMobile.png');
+    background-size: cover;
+  }
 }
