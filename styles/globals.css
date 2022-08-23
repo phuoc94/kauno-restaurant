@@ -38,6 +38,10 @@ a {
   background-color: #f8f6f1;
 }
 
+.h-130 {
+  height: 130px;
+}
+
 .font-classique-saigon {
   font-family: 'ClassiqueSaigon';
 }
@@ -84,6 +88,14 @@ a {
 
 .dashed-bottom {
   border-bottom: 1px dashed #662c0af4;
+}
+
+.mh-80 {
+  min-height: 80px;
+}
+.menu-bg {
+  background-image: url('../assets/Kaunomenu.png');
+  background-repeat: no-repeat;
 }
 
 .hero {
