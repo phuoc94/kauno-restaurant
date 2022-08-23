@@ -50,6 +50,22 @@ a {
   color: #4e603e;
 }
 
+.color-d-sienna {
+  color: #3c1d0f;
+}
+
+.color-seal-brown {
+  color: #662c0a;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
 .button-primary {
   background-color: #4e603e;
   color: #fff;
@@ -103,6 +119,16 @@ a {
   background-color: #f8f6f1;
   background-image: url('../assets/HeroWebsite.png');
   background-repeat: no-repeat;
+}
+
+.about-text {
+  font-size: 1.125rem;
+}
+
+.bg-about {
+  background-image: url('../assets/about.png');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media only screen and (max-width: 767px) {

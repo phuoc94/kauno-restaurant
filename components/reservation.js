@@ -52,7 +52,9 @@ const Reservation = () => {
         </Row>
         <Row className="mt-4">
           <Col className="d-flex justify-content-center">
-            <Button variant="success">Book A Table</Button>
+            <button className="button-primary mt-4 text-nowrap py-3">
+              <span className="h4 font-300">BOOK A TABLE</span>
+            </button>
           </Col>
         </Row>
       </Form>
