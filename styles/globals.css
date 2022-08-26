@@ -136,4 +136,7 @@ a {
     background-image: url('../assets/HeroMobile.png');
     background-size: cover;
   }
+  .hero-text {
+    font-size: 2rem;
+  }
 }
