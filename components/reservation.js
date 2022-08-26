@@ -1,7 +1,23 @@
-import { Container, Form, Row, Col, Button } from 'react-bootstrap';
+import { useState } from 'react';
+
+import { Container, Form, Row, Col } from 'react-bootstrap';
+
+import TextField from '@mui/material/TextField';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 const Reservation = () => {
-  const TodayDate = new Date().getDate();
+  const [date, setDate] = useState(null);
+  const [time, setTime] = useState(null);
+  const [people, setPeople] = useState('');
+
   return (
     <Container className="my-5">
       <Row className="mb-3">
@@ -12,50 +28,79 @@ const Reservation = () => {
       </Row>
       <Form>
         <Row>
-          <Form.Group className="col-md-4 p-2" controlId="formReservation">
-            <Form.Control
-              type="text"
-              placeholder="dd.mm.yyyy"
-              onFocus={(e) => (e.target.type = 'date')}
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <Col className="col-12 col-md-4 p-2">
+              <DatePicker
+                label="Date"
+                value={date}
+                onChange={(newValue) => {
+                  setDate(newValue);
+                }}
+                renderInput={(params) => (
+                  <TextField {...params} className="w-100" />
+                )}
+              />
+            </Col>
+            <Col className="col-12 col-md-4 p-2">
+              <TimePicker
+                label="Time"
+                value={time}
+                ampm={false}
+                onChange={(newValue) => {
+                  setTime(newValue);
+                }}
+                renderInput={(params) => (
+                  <TextField {...params} className="w-100" />
+                )}
+              />
+            </Col>
+          </LocalizationProvider>
+          <Col className="col-12 col-md-4 p-2">
+            <FormControl fullWidth>
+              <InputLabel id="people-select-label">People</InputLabel>
+              <Select
+                labelId="people-select-label"
+                id="people-select"
+                value={people}
+                label="People"
+                onChange={(e) => {
+                  setPeople(e.target.value);
+                }}
+              >
+                <MenuItem value={1}>1 people</MenuItem>
+                <MenuItem value={2}>2 people</MenuItem>
+                <MenuItem value={3}>3 people</MenuItem>
+                <MenuItem value={4}>4 people</MenuItem>
+                <MenuItem value={5}>5 people</MenuItem>
+                <MenuItem value={6}>6 people</MenuItem>
+                <MenuItem value={7}>7 people</MenuItem>
+                <MenuItem value={8}>8 people</MenuItem>
+                <MenuItem value={9}>9 people</MenuItem>
+                <MenuItem value={10}>10 people</MenuItem>
+              </Select>
+            </FormControl>
+          </Col>
+          <Col className="col-12 col-md-6 p-2">
+            <TextField fullWidth label="Email" variant="outlined" />
+          </Col>
+          <Col className="col-12 col-md-6 p-2" controlId="formReservation">
+            <TextField
+              fullWidth
+              label="Phone number"
+              variant="outlined"
+              placeholder="Phone number"
             />
-          </Form.Group>
-          <Form.Group className="col-md-4 p-2" controlId="formReservation">
-            <Form.Control
-              type="text"
-              placeholder="hh.mm"
-              onFocus={(e) => (e.target.type = 'time')}
-            />
-          </Form.Group>
-          <Form.Group className="col-md-4 p-2" controlId="formReservation">
-            <select className="form-select" defaultValue="2">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-          </Form.Group>
-          <Form.Group className="col-md-6 p-2" controlId="formReservation">
-            <Form.Label>Email*: </Form.Label>
-            <Form.Control type="email" placeholder="Email" />
-          </Form.Group>
-          <Form.Group className="col-md-6 p-2" controlId="formReservation">
-            <Form.Label>Phone number:</Form.Label>
-            <Form.Control type="text" placeholder="Phone number" />
-          </Form.Group>
-          <Form.Group className="col-md-12 p-2" controlId="formReservation">
-            <Form.Label>Message:</Form.Label>
-            <Form.Control
-              as="textarea"
+          </Col>
+          <Col className="col-12 p-2" controlId="formReservation">
+            <TextField
+              label="Message"
+              fullWidth
+              id="outlined-multiline-static"
+              multiline
               placeholder="Write here your special requests :)"
-              style={{ height: '100px' }}
+              rows={4}
             />
-          </Form.Group>
+          </Col>
         </Row>
         <Row className="mt-4">
           <Col className="d-flex justify-content-center">
