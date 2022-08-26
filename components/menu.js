@@ -11,7 +11,7 @@ const MenuSection = () => {
           <Col>
             <Col className="section-heading text-center my-5">
               <Typography
-                variant="h2"
+                variant="h3"
                 component="h2"
                 className="font-classique-saigon color-primary"
               >

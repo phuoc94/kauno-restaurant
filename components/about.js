@@ -11,7 +11,7 @@ const AboutSection = () => {
             <Col>
               <Typography
                 className="font-classique-saigon text-uppercase color-d-sienna"
-                variant="h2"
+                variant="h3"
                 component="h2"
               >
                 The Little Vietnamese Kitchen

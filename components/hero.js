@@ -1,4 +1,5 @@
 import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Typography } from '@mui/material';
 const HeroSection = () => {
   return (
     <section>
@@ -11,9 +12,9 @@ const HeroSection = () => {
             className="text-center d-flex align-items-center justify-content-center h-100"
           >
             <Col className="w-60">
-              <h1 className="hero-text">
+              <Typography variant="h2" component="h1">
                 Welcome to the Little Vietnamese kitchen
-              </h1>
+              </Typography>
               <button className="button-primary mt-4 text-nowrap py-3">
                 <span className="h4 font-300">BOOK A TABLE</span>
               </button>
