@@ -10,14 +10,14 @@ const HeroSection = () => {
             sm={12}
             className="text-center d-flex align-items-center justify-content-center h-100"
           >
-            <div className="w-60">
+            <Col className="w-60">
               <h1 className="hero-text">
                 Welcome to the Little Vietnamese kitchen
               </h1>
               <button className="button-primary mt-4 text-nowrap py-3">
                 <span className="h4 font-300">BOOK A TABLE</span>
               </button>
-            </div>
+            </Col>
           </Col>
           <Col />
         </Row>

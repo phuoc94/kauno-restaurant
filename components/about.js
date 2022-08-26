@@ -8,7 +8,7 @@ const AboutSection = () => {
         <Row className="h-100 mt-5">
           <Col md={5} className="bg-about d-none d-md-block" />
           <Col className="text-center d-flex align-items-center">
-            <div>
+            <Col>
               <Typography
                 className="font-classique-saigon text-uppercase color-d-sienna"
                 variant="h2"
@@ -34,7 +34,7 @@ const AboutSection = () => {
               <button className="button-primary mt-5 text-nowrap py-3">
                 <span className="h4 font-300">READ MORE</span>
               </button>
-            </div>
+            </Col>
           </Col>
         </Row>
       </Container>

@@ -9,7 +9,7 @@ const MenuSection = () => {
       <Container>
         <Row>
           <Col>
-            <div className="section-heading text-center my-5">
+            <Col className="section-heading text-center my-5">
               <Typography
                 variant="h2"
                 component="h2"
@@ -17,8 +17,7 @@ const MenuSection = () => {
               >
                 Our Menu
               </Typography>
-              <div className="line-dec"></div>
-            </div>
+            </Col>
           </Col>
         </Row>
         <Row>

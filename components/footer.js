@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="footer">
       <Container className="py-5">
         <Row>
-          <Col className="align-self-center">
+          <Col className="align-self-center my-2" sm={12} md={6} lg={4}>
             <p className="m-0">
               <b>Mon-Tue:</b> 10.00 - 17.30
             </p>
@@ -21,7 +21,7 @@ const Footer = () => {
               <b>Sat:</b> 11.00 - 17.30
             </p>
           </Col>
-          <Col className="text-center align-self-center">
+          <Col className="align-self-center my-2" sm={12} md={6} lg={4}>
             <b>Hallituskatu 22, 13100 Hämeenlinna</b> <br />
             <FaPhoneAlt /> 0400415224 <br />
             <MdEmail /> kaunocafe@gmail.com
@@ -29,7 +29,12 @@ const Footer = () => {
             <AiOutlineFacebook size={26} />
             <AiOutlineInstagram size={26} />
           </Col>
-          <Col className="d-flex justify-content-end">
+          <Col
+            className="d-flex justify-content-center justify-content-lg-end my-4"
+            sm={12}
+            md={12}
+            lg={4}
+          >
             <Image src={Logo} alt="logo" width={162} height={162} />
           </Col>
         </Row>
