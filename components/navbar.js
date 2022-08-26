@@ -11,8 +11,8 @@ const CustomNavbar = () => {
     <>
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
-            <Image src={Logo} alt="logo" width={324} height={92} />
+          <Navbar.Brand href="#home" className="row col-8 col-md-5 col-lg-3">
+            <Image src={Logo} alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
