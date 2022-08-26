@@ -1,6 +1,7 @@
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 
 const Reservation = () => {
+  const TodayDate = new Date().getDate();
   return (
     <Container className="my-5">
       <Row className="mb-3">
@@ -11,13 +12,21 @@ const Reservation = () => {
       </Row>
       <Form>
         <Row>
-          <Form.Group className="col-md-4 m-2" controlId="formReservation">
-            <Form.Control type="date" />
+          <Form.Group className="col-md-4 p-2" controlId="formReservation">
+            <Form.Control
+              type="text"
+              placeholder="dd.mm.yyyy"
+              onFocus={(e) => (e.target.type = 'date')}
+            />
           </Form.Group>
-          <Form.Group className="col-md-4 m-2" controlId="formReservation">
-            <Form.Control type="time" />
+          <Form.Group className="col-md-4 p-2" controlId="formReservation">
+            <Form.Control
+              type="text"
+              placeholder="hh.mm"
+              onFocus={(e) => (e.target.type = 'time')}
+            />
           </Form.Group>
-          <Form.Group className="col-md-4 m-2" controlId="formReservation">
+          <Form.Group className="col-md-4 p-2" controlId="formReservation">
             <select className="form-select" defaultValue="2">
               <option value="1">1</option>
               <option value="2">2</option>
@@ -31,15 +40,15 @@ const Reservation = () => {
               <option value="10">10</option>
             </select>
           </Form.Group>
-          <Form.Group className="col-md-6 m-2" controlId="formReservation">
+          <Form.Group className="col-md-6 p-2" controlId="formReservation">
             <Form.Label>Email*: </Form.Label>
             <Form.Control type="email" placeholder="Email" />
           </Form.Group>
-          <Form.Group className="col-md-6 m-2" controlId="formReservation">
+          <Form.Group className="col-md-6 p-2" controlId="formReservation">
             <Form.Label>Phone number:</Form.Label>
             <Form.Control type="text" placeholder="Phone number" />
           </Form.Group>
-          <Form.Group className="col-md-12 m-2" controlId="formReservation">
+          <Form.Group className="col-md-12 p-2" controlId="formReservation">
             <Form.Label>Message:</Form.Label>
             <Form.Control
               as="textarea"
