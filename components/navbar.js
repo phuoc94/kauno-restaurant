@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Logo from '../assets/web-logo.svg';
+import Logo from '../public/assets/web-logo.svg';
 
 const CustomNavbar = () => {
   return (

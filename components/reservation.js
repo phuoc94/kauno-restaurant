@@ -18,11 +18,9 @@ const Reservation = () => {
             <Form.Control type="time" />
           </Form.Group>
           <Form.Group className="col-md-4" controlId="formReservation">
-            <select className="form-select">
+            <select className="form-select" defaultValue="2">
               <option value="1">1</option>
-              <option value="2" selected>
-                2
-              </option>
+              <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
               <option value="5">5</option>
