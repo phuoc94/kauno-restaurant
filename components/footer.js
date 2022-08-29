@@ -12,17 +12,20 @@ const Footer = () => {
         <Row>
           <Col className="align-self-center my-2" sm={12} md={6} lg={4}>
             <p className="m-0">
-              <b>Mon-Tue:</b> 10.00 - 17.30
+              <span className="font-weight-900">Mon-Tue:</span> 10.00 - 17.30
             </p>
             <p className="m-0">
-              <b>Wed-Fri:</b> 10.00 - 20.00
+              <span className="font-weight-900">Wed-Fri:</span> 10.00 - 20.00
             </p>
             <p className="m-0">
-              <b>Sat:</b> 11.00 - 17.30
+              <span className="font-weight-900">Sat:</span> 11.00 - 17.30
             </p>
           </Col>
           <Col className="align-self-center my-2" sm={12} md={6} lg={4}>
-            <b>Hallituskatu 22, 13100 Hämeenlinna</b> <br />
+            <span className="font-weight-900">
+              Hallituskatu 22, 13100 Hämeenlinna
+            </span>
+            <br />
             <FaPhoneAlt /> 0400415224 <br />
             <MdEmail /> kaunocafe@gmail.com
             <br />

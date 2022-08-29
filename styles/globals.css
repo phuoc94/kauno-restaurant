@@ -12,7 +12,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat' !important;
+  font-family: 'Montserrat';
 }
 
 a {
@@ -46,7 +46,7 @@ a {
 }
 
 .font-classique-saigon {
-  font-family: 'ClassiqueSaigon' !important;
+  font-family: 'ClassiqueSaigon';
 }
 
 .color-primary {
@@ -67,6 +67,10 @@ a {
 
 .font-italic {
   font-style: italic;
+}
+
+.font-weight-900 {
+  font-weight: 900;
 }
 
 .button-primary {
@@ -93,10 +97,6 @@ a {
   display: inline-block;
 }
 
-.text-primary {
-  color: #4e603e;
-}
-
 .font-300 {
   font-weight: 300 !important;
 }
@@ -115,6 +115,7 @@ a {
 .menu-bg {
   background-image: url('/assets/Kaunomenu.png');
   background-repeat: no-repeat;
+  background-size: 20vh;
 }
 
 .hero {

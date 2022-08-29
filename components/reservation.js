@@ -12,6 +12,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Typography from '@mui/material/Typography';
 
 const Reservation = () => {
   const [date, setDate] = useState(null);
@@ -19,11 +20,19 @@ const Reservation = () => {
   const [people, setPeople] = useState('');
 
   return (
-    <Container className="my-5">
+    <Container className="py-5">
       <Row className="mb-3">
         <Col className="text-center">
-          <h1>Make a Reservation</h1>
-          <h5>Get in touch with the restaurant</h5>
+          <Typography
+            variant="h2"
+            component="h2"
+            className="font-classique-saigon text-uppercase color-primary"
+          >
+            Make a Reservation
+          </Typography>
+          <Typography variant="h5" component="h3">
+            Get in touch with the restaurant
+          </Typography>
         </Col>
       </Row>
       <Form>

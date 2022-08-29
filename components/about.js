@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Typography } from '@mui/material';
+import Link from 'next/link';
 
 const AboutSection = () => {
   return (
@@ -31,9 +32,11 @@ const AboutSection = () => {
                   a refreshing spring roll dish.
                 </span>
               </p>
-              <button className="button-primary mt-5 text-nowrap py-3">
-                <span className="h4 font-300">READ MORE</span>
-              </button>
+              <Link href="/about-us">
+                <button className="button-primary mt-5 text-nowrap py-3">
+                  <span className="h5 font-300">READ MORE</span>
+                </button>
+              </Link>
             </Col>
           </Col>
         </Row>

@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material';
 import { Container, Row, Col } from 'react-bootstrap';
 import menu from '../data/menu.json';
+import Link from 'next/link';
 
 const MenuSection = () => {
   const main = menu.main;
@@ -9,7 +10,7 @@ const MenuSection = () => {
       <Container>
         <Row>
           <Col>
-            <Col className="section-heading text-center my-5">
+            <Col className="section-heading text-center mt-5">
               <Typography
                 variant="h3"
                 component="h2"
@@ -23,7 +24,7 @@ const MenuSection = () => {
         <Row>
           {main.map((item, index) => (
             <Col key={item.title} md={6} sm={12}>
-              <Row className="m-2">
+              <Row className="m-2 mt-5">
                 <Col>
                   <Typography variant="h5" component="h3" className="py-2">
                     {item.title}
@@ -45,9 +46,11 @@ const MenuSection = () => {
         </Row>
         <Row>
           <Col className="d-flex justify-content-center">
-            <button className="button-primary mt-5 text-nowrap py-3">
-              <span className="h4 font-300">READ MORE</span>
-            </button>
+            <Link href="/menu">
+              <button className="button-primary mt-5 text-nowrap py-3">
+                <span className="h5 font-300">READ MORE</span>
+              </button>
+            </Link>
           </Col>
         </Row>
       </Container>
