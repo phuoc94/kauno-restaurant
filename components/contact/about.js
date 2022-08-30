@@ -8,8 +8,8 @@ const ContactAbout = () => {
         <Col lg={5} />
         <Col lg={7} md={12} className="px-5 ">
           <Typography
-            variant="h2"
-            component="h2"
+            variant="h3"
+            component="h3"
             className="font-classique-saigon text-uppercase color-seal-brown text-center"
           >
             THE LIttle VIetnamese kItchen

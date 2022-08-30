@@ -24,8 +24,8 @@ const Reservation = () => {
       <Row className="mb-3">
         <Col className="text-center">
           <Typography
-            variant="h2"
-            component="h2"
+            variant="h3"
+            component="h3"
             className="font-classique-saigon text-uppercase color-primary"
           >
             Make a Reservation
