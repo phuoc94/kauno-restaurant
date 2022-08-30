@@ -6,7 +6,7 @@ import Reservation from '../components/reservation';
 export default function AboutUs() {
   return (
     <Layout>
-      <Col className="vh-100 d-flex align-items-center justify-content-center bg-primary">
+      <Col className="vh-100 d-flex align-items-center justify-content-center bg-about-us">
         <Typography
           variant="h2"
           component="h1"

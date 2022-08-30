@@ -125,6 +125,11 @@ a {
   background-size: 20vh;
 }
 
+.bg-about-us {
+  background-image: url('/assets/Hero-about-us.png');
+  background-repeat: no-repeat;
+}
+
 .hero {
   height: 100vh;
   background-color: #f8f6f1;
