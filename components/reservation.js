@@ -20,7 +20,7 @@ const Reservation = () => {
   const [people, setPeople] = useState('');
 
   return (
-    <Container className="py-5">
+    <Container className="py-5" id="reservation">
       <Row className="mb-3">
         <Col className="text-center">
           <Typography

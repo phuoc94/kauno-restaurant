@@ -45,7 +45,7 @@ const CustomNavbar = () => {
                 <span className="h4 font-300">CONTACT US</span>
               </button>
             </Link>
-            <Link href="/contact-us#book-a-table">
+            <Link href="/contact-us#reservation">
               <button className="button-primary ms-2 text-nowrap py-3">
                 <span className="h4 font-300">BOOK A TABLE</span>
               </button>
