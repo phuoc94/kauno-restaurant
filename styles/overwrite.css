@@ -1,3 +1,8 @@
 .navbar-nav .nav-link.active {
   color: #4e603e !important;
 }
+
+.px-6 {
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+}

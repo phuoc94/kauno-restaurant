@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 const HeroSection = () => {
   return (
     <section>
-      <Container fluid className="hero">
+      <Container fluid className="hero bg-home-hero-food">
         <Row className="h-100">
           <Col
             lg={6}

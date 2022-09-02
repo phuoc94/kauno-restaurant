@@ -46,7 +46,9 @@ a {
 }
 
 .font-classique-saigon {
-  font-family: 'ClassiqueSaigon';
+  //font-family: 'ClassiqueSaigon';
+  font-family: 'Montserrat';
+  font-weight: 900;
 }
 
 .color-primary {
@@ -132,13 +134,25 @@ a {
 
 .hero {
   height: 100vh;
+}
+
+.bg-home-hero-food {
   background-color: #f8f6f1;
-  background-image: url('/assets/HeroWebsite.png');
+  background-image: url('/assets/home/hero-food.svg');
   background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 964px 697px;
 }
 
 .about-text {
   font-size: 1.125rem;
+}
+
+.bg-boba {
+  position: absolute;
+  right: 15px;
+  transform: translateY(70%) rotate(15deg);
+  z-index: -1;
 }
 
 .bg-about {
@@ -152,6 +166,7 @@ a {
     background-image: url('/assets/HeroMobile.png');
     background-size: cover;
   }
+
   .hero-text {
     font-size: 2rem;
   }
