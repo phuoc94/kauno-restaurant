@@ -25,7 +25,7 @@ export default function AboutUs() {
         <Col className="d-flex justify-content-end bg-boba">
           <Image src={Boba} alt="bg-image" />
         </Col>
-        <Container className="px-6">
+        <Container className="px-6 wwa-text">
           <Typography
             variant="h3"
             component="h2"

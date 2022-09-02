@@ -3,6 +3,13 @@
 }
 
 .px-6 {
-  padding-left: 4rem !important;
-  padding-right: 4rem !important;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }

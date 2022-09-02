@@ -170,4 +170,10 @@ a {
   .hero-text {
     font-size: 2rem;
   }
+
+  .bg-boba {
+    position: fixed;
+    transform: translateY(70%) rotate(15deg);
+    z-index: -1;
+  }
 }
