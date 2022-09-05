@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-import { Container, Form, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import TextField from '@mui/material/TextField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
@@ -13,11 +13,76 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from './alert';
+import emailjs from 'emailjs-com';
+
+const defaultValues = {
+  date: new Date(),
+  email: '',
+  phone: '',
+  message: '',
+};
 
 const Reservation = () => {
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(null);
   const [people, setPeople] = useState('');
+  const [formValues, setFormValues] = useState(defaultValues);
+  const [open, setOpen] = React.useState(false);
+  const [status, setStatus] = useState('');
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
+  };
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    let templateParams = {
+      date: `${date.$D}.${date.$M + 1}.${date.$y}`,
+      time: `${time.$H}:${time.$m}`,
+      people,
+      email: formValues.email,
+      phone: formValues.phone,
+      message: formValues.message,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_USER_ID
+      )
+      .then(
+        (result) => {
+          setStatus('success');
+          setOpen(true);
+
+          console.log('contact form submitted', result.text);
+        },
+        (error) => {
+          setStatus('error');
+          setOpen(true);
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
 
   return (
     <Container className="py-5" id="reservation">
@@ -35,7 +100,7 @@ const Reservation = () => {
           </Typography>
         </Col>
       </Row>
-      <Form>
+      <Box component="form" onSubmit={sendEmail}>
         <Row>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Col className="col-12 col-md-4 p-2">
@@ -46,8 +111,9 @@ const Reservation = () => {
                   setDate(newValue);
                 }}
                 renderInput={(params) => (
-                  <TextField {...params} className="w-100" />
+                  <TextField {...params} className="w-100" required />
                 )}
+                controlId="date"
               />
             </Col>
             <Col className="col-12 col-md-4 p-2">
@@ -59,8 +125,9 @@ const Reservation = () => {
                   setTime(newValue);
                 }}
                 renderInput={(params) => (
-                  <TextField {...params} className="w-100" />
+                  <TextField {...params} className="w-100" required />
                 )}
+                controlId="time"
               />
             </Col>
           </LocalizationProvider>
@@ -72,9 +139,12 @@ const Reservation = () => {
                 id="people-select"
                 value={people}
                 label="People"
+                name="people"
                 onChange={(e) => {
                   setPeople(e.target.value);
                 }}
+                required
+                controlId="people"
               >
                 <MenuItem value={1}>1 people</MenuItem>
                 <MenuItem value={2}>2 people</MenuItem>
@@ -90,7 +160,17 @@ const Reservation = () => {
             </FormControl>
           </Col>
           <Col className="col-12 col-md-6 p-2">
-            <TextField fullWidth label="Email" variant="outlined" />
+            <TextField
+              fullWidth
+              label="Email"
+              variant="outlined"
+              type="email"
+              name="email"
+              value={formValues.name}
+              onChange={handleInputChange}
+              required
+              controlId="email"
+            />
           </Col>
           <Col className="col-12 col-md-6 p-2" controlId="formReservation">
             <TextField
@@ -98,6 +178,11 @@ const Reservation = () => {
               label="Phone number"
               variant="outlined"
               placeholder="Phone number"
+              type="tel"
+              name="phone"
+              value={formValues.name}
+              onChange={handleInputChange}
+              controlId="phone"
             />
           </Col>
           <Col className="col-12 p-2" controlId="formReservation">
@@ -108,17 +193,39 @@ const Reservation = () => {
               multiline
               placeholder="Write here your special requests :)"
               rows={4}
+              name="message"
+              value={formValues.name}
+              onChange={handleInputChange}
+              controlId="message"
             />
           </Col>
         </Row>
         <Row className="mt-4">
           <Col className="d-flex justify-content-center">
-            <button className="button-primary mt-4 text-nowrap py-3">
+            <button
+              className="button-primary mt-4 text-nowrap py-3"
+              type="submit"
+            >
               <span className="h4 font-300">BOOK A TABLE</span>
             </button>
           </Col>
         </Row>
-      </Form>
+      </Box>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity={status} sx={{ width: '100%' }}>
+          {status === 'success' ? (
+            <span>
+              Your message has been sent. We will contact you as soon as
+              possible.
+            </span>
+          ) : (
+            <span>
+              Something went wrong. Please try again later or contact us
+              directly.
+            </span>
+          )}
+        </Alert>
+      </Snackbar>
     </Container>
   );
 };
