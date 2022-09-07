@@ -113,7 +113,6 @@ const Reservation = () => {
                 renderInput={(params) => (
                   <TextField {...params} className="w-100" required />
                 )}
-                controlId="date"
               />
             </Col>
             <Col className="col-12 col-md-4 p-2">
@@ -127,7 +126,6 @@ const Reservation = () => {
                 renderInput={(params) => (
                   <TextField {...params} className="w-100" required />
                 )}
-                controlId="time"
               />
             </Col>
           </LocalizationProvider>
@@ -144,7 +142,6 @@ const Reservation = () => {
                   setPeople(e.target.value);
                 }}
                 required
-                controlId="people"
               >
                 <MenuItem value={1}>1 people</MenuItem>
                 <MenuItem value={2}>2 people</MenuItem>
@@ -169,10 +166,9 @@ const Reservation = () => {
               value={formValues.name}
               onChange={handleInputChange}
               required
-              controlId="email"
             />
           </Col>
-          <Col className="col-12 col-md-6 p-2" controlId="formReservation">
+          <Col className="col-12 col-md-6 p-2">
             <TextField
               fullWidth
               label="Phone number"
@@ -182,10 +178,9 @@ const Reservation = () => {
               name="phone"
               value={formValues.name}
               onChange={handleInputChange}
-              controlId="phone"
             />
           </Col>
-          <Col className="col-12 p-2" controlId="formReservation">
+          <Col className="col-12 p-2">
             <TextField
               label="Message"
               fullWidth
@@ -196,7 +191,6 @@ const Reservation = () => {
               name="message"
               value={formValues.name}
               onChange={handleInputChange}
-              controlId="message"
             />
           </Col>
         </Row>
