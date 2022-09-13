@@ -207,6 +207,9 @@ overflow: hidden;
   .contact-about-image {
     width: 10%;
     display: none;
+  } 
+  .image {
+    transform: translateY(-100px);
   }
 }
 
@@ -225,5 +228,8 @@ overflow: hidden;
     transform: translateY(70%) rotate(15deg);
     z-index: -1;
   }
+ 
+
+
 }
 

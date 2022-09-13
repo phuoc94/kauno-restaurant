@@ -26,7 +26,7 @@ export default function AboutUs() {
         <Col className='col-lg-2 	d-none d-lg-block'>
         
         </Col>
-        <Col className="px-6 wwa-text col-lg-8 ">
+        <Col className="px-6 wwa-text col-lg-8 col-12">
           <Typography
             variant="h3"
             component="h2"
@@ -70,8 +70,8 @@ export default function AboutUs() {
             .
           </Typography>
         </Col>
-        <Col className='col-lg-2 	d-none d-lg-block'>
-          <Col className='d-flex align-items-end h-100 image'>
+        <Col className='col-lg-2 	col-12'>
+          <Col className='d-flex align-items-end justify-content-end h-100 image'>
           <Image src={Boba} alt="bg-image" />
           </Col>
         </Col>
