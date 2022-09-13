@@ -22,10 +22,11 @@ export default function AboutUs() {
         </Typography>
       </Col>
       <Container fluid>
-        <Col className="d-flex justify-content-end bg-boba">
-          <Image src={Boba} alt="bg-image" />
+        <Row>
+        <Col className='col-lg-2 	d-none d-lg-block'>
+        
         </Col>
-        <Container className="px-6 wwa-text">
+        <Col className="px-6 wwa-text col-lg-8 ">
           <Typography
             variant="h3"
             component="h2"
@@ -68,7 +69,13 @@ export default function AboutUs() {
             </b>
             .
           </Typography>
-        </Container>
+        </Col>
+        <Col className='col-lg-2 	d-none d-lg-block'>
+          <Col className='d-flex align-items-end h-100 image'>
+          <Image src={Boba} alt="bg-image" />
+          </Col>
+        </Col>
+        </Row>
       </Container>
       <Col className="py-5 bg-culture">
         <Typography
