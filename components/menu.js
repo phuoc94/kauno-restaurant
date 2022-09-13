@@ -2,6 +2,7 @@ import { Typography } from '@mui/material';
 import { Container, Row, Col } from 'react-bootstrap';
 import menu from '../data/menu.json';
 import Link from 'next/link';
+import MenuItem from './menuItem';
 
 const MenuSection = () => {
   const main = menu.main;
@@ -23,25 +24,7 @@ const MenuSection = () => {
         </Row>
         <Row>
           {main.map((item, index) => (
-            <Col key={item.title} md={6} sm={12}>
-              <Row className="m-2 mt-5">
-                <Col>
-                  <Typography variant="h5" component="h3" className="py-2">
-                    {item.title}
-                  </Typography>
-                </Col>
-                <Col className="text-end">
-                  <Typography variant="h5" component="h3">
-                    {item.price}
-                  </Typography>
-                </Col>
-              </Row>
-              <Row className="dashed-bottom mh-80 mx-2">
-                <Col>
-                  <Typography>{item.description}</Typography>
-                </Col>
-              </Row>
-            </Col>
+            <MenuItem key={index} item={item} md={6} sm={12} />
           ))}
         </Row>
         <Row>

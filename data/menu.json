@@ -1,11 +1,23 @@
 {
-  "main": [
+  "starter": [
     {
       "title": "Spring roll 2kpl",
-      "price": 13.5,
       "description": "Valise: Katkarapu / Lohi / Tofu- avokado Hoisin-maapähkinäkastike tai mietochilikalakastike",
+      "price": 6.50,
       "featured": "true"
     },
+    {
+      "title": "Salmon bite",
+      "description": "Pintapaahdettua lohta, kurkkua, avokadoa, teriyakikastike",
+      "price": 7.00
+    },
+    {
+      "title": "Bimi-parsakaali",
+      "description": "Höystetty Bimi-parsakaali ja hoisin-maapähkinä kastikkeella ",
+      "price": 6.50
+    }
+  ],
+  "main": [
     {
       "title": "Lohi tai Tofu riisikulho",
       "price": 13.5,
@@ -23,6 +35,93 @@
       "price": 10.5,
       "description": "Naudanliha tai kana tai tofu riisi nuudeli, lihaliemi",
       "featured": "true"
+    },
+    {
+      "title": "Kauno Teriyaki",
+      "price": 13.5,
+      "description": "Paistettu lohi/tofu makeasoijakastike, riisi, avokado ja salaatti"
+    }
+  ],
+  "vegan": [
+    {
+      "title": "Riisipaperi Kääryle Annos (3kpl)",
+      "description": "Valise: Tofu- avokado Hoisin-maapähkinäkastike",
+      "price": 7
+    },
+    {
+      "title": "Pho",
+      "description": "Talon kasvisliemi, riisinuudelia, soijafilee, siitakesieniä, jäävuorisalaattia, lime, korianteria, paahdettua sipulia, viipaloitua sipulia (Ve, S) ",
+      "price": 10.90
+    },
+    {
+      "title": "Täytetty Patonki",
+      "description": "Vehnäpatonkia, porkkana / retikka pikkelssiä, paahdettua sipulia, kurkkua, korianteria, soijasuikaleita, soijapihvin suikaleita, talon omakastike (Ve, S)",
+      "price": 6.50
+    },
+    {
+      "title": "Bun Chay",
+      "description": "Riisinuudelia, tofua, soijapihvin suikaleita, paahdettua sipulia, salaattia, kurkkua, minttua, talon omakastike (Ve, S)",
+      "price": 10.9
+    },
+    {
+      "title": "Massaman Curry",
+      "description": "Massaman curry tahnaa, kookosmaitoa, soijasuikaleita, tofua, peruna, sipulia,parsakaali , kukkakaali ,porkkana, maapähkinä, riisin kera (Ve, G, S, Pä)",
+      "price": 10.9
+    },
+    {
+      "title": "Poke Chay",
+      "description": "Sushi riisiä, soijasuikaleita, tofua, avokadoa, sipulia, porkkana / retikka pikkelssiä, edamame, seesamisiemen, talon omakastike (Ve, S)"
+    },
+    {
+      "title": "Panang Curry",
+      "description": "Panang curry tahnaa, kookosmaitoa, soijasuikaleita, tofua, lime lehtiä, paprika, parsakaali , kukkakaali , porkkana, riisin kera. (Ve, G, S)",
+      "price": 10.9
+    },
+    {
+      "title": "Teriyaki Chay",
+      "description": "Sushi riisiä, soijasuikaleita, tofua, avokadoa, salaattia, sipulia, porkkana, seesaminsiemen, talon omakastike (Ve, S)"
+    },
+    {
+      "title": "Red Curry",
+      "description": "Red curry tahnaa, kookosmaitoa, soijasuikaleita, tofua, lime lehtiä, paprika, parsakaali , kukkakaali , porkkana,riisin kera. (Ve, G, S)",
+      "price": 10.9
+    }
+  ],
+  "drink": [
+    {
+      "title": "Mango mojito",
+      "description": "mango, lime, minttu, sparkling sooda",
+      "price": 5
+    },
+    {
+      "title": "Berry mix",
+      "price": 5,
+      "description": "Vadelma tai mansikka tai mustikka, lime, minttu, sooda"
+    },
+    {
+      "title": "Saigon beer",
+      "price": 6
+    },
+    {
+      "title": "Asahi",
+      "price": 6
+    },
+    {
+      "title": "Punaviini",
+      "price": "6.00/22.00"
+    },
+    {
+      "title": "Valkoviini",
+      "price": "6.00/22.00"
+    },
+    {
+      "title": "Vietnamilainen kahvi",
+      "price": 4,
+      "description": "Tiputettu vietnamilainen kahvi kondensoidulla maidolla"
+    },
+    {
+      "title": "Jäätelö",
+      "price": 5.5
     }
   ]
 }
