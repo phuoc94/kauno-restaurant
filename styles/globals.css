@@ -190,7 +190,9 @@ overflow: hidden;
   background-size: 45%, 15%;
   background-position: left bottom, left top;
 }
-
+.button {
+  width: 170px;
+}
 @media only screen and (max-width: 991px) {
   .contact-about {
     background-image: url('/assets/contactus/Vector90.svg');
