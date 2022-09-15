@@ -19,7 +19,7 @@ const CustomNavbar = () => {
           </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="justify-content-center w-100 h3 font-300 color-primary">
+            <Nav className="justify-content-center w-100 h3 font-300 color-primary text-center">
               <Link href="/" passHref>
                 <Nav.Link className="mx-1">Home</Nav.Link>
               </Link>
@@ -40,16 +40,20 @@ const CustomNavbar = () => {
               </NavDropdown>
   */}
             </Nav>
-            <Link href="/contact-us">
-              <button className="button-secondary me-2 text-nowrap py-3">
-                <span className="h4 font-300">CONTACT US</span>
+            <div className='col-lg-3 col-12 text-center'>
+              <Link href="/contact-us">
+              <button className="button-secondary text-nowrap py-3 p-2 m-1 button">
+                <span className="h4 font-300 text-center">CONTACT US</span>
               </button>
-            </Link>
-            <Link href="/contact-us#reservation">
-              <button className="button-primary ms-2 text-nowrap py-3">
-                <span className="h4 font-300">BOOK A TABLE</span>
-              </button>
-            </Link>
+              </Link>
+            </div>
+            <div className='col-lg-3 col-12 text-center'>
+              <Link href="/contact-us#reservation">
+                <button className="button-primary text-nowrap py-3 p-2 m-1 button">
+                  <span className="h4 font-300 text-center">BOOK A TABLE</span>
+                </button>
+              </Link>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

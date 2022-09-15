@@ -26,7 +26,7 @@ export default function AboutUs() {
         <Col className='col-lg-2 	d-none d-lg-block'>
         
         </Col>
-        <Col className="px-6 wwa-text col-lg-8 ">
+        <Col className="px-6 wwa-text col-lg-8 col-12">
           <Typography
             variant="h3"
             component="h2"
@@ -70,8 +70,8 @@ export default function AboutUs() {
             .
           </Typography>
         </Col>
-        <Col className='col-lg-2 	d-none d-lg-block'>
-          <Col className='d-flex align-items-end h-100 image'>
+        <Col className='col-lg-2 	col-12'>
+          <Col className='d-flex align-items-end justify-content-end h-100 image'>
           <Image src={Boba} alt="bg-image" />
           </Col>
         </Col>
@@ -87,7 +87,7 @@ export default function AboutUs() {
         </Typography>
         <Container>
           <Row className="mt-3">
-            <Col className="d-flex justify-content-center flex-column">
+            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
               <Image src={Fish} alt="fish" />
               <Typography
                 variant="h4"
@@ -104,7 +104,7 @@ export default function AboutUs() {
                 We aim at bringing excellent quality food to our customer
               </Typography>
             </Col>
-            <Col className="d-flex justify-content-center flex-column">
+            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
               <Image src={Carrot} alt="carrot" />
 
               <Typography
@@ -122,7 +122,7 @@ export default function AboutUs() {
                 Fresh, seasonal veggies from Finnish farms are well-loved here
               </Typography>
             </Col>
-            <Col className="d-flex justify-content-center flex-column">
+            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
               <Image src={Lime} alt="lime" />
 
               <Typography
