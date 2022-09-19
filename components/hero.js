@@ -12,10 +12,10 @@ const HeroSection = () => {
           >
             <Col>
               <Typography variant="h2" component="h1" className="color-primary">
-                Welcome to the Little Vietnamese kitchen
+                Tervetuloa pieneen Vietnamilaiseen keittiöön
               </Typography>
-              <button className="button-primary mt-4 text-nowrap py-3">
-                <span className="h4 font-300">BOOK A TABLE</span>
+              <button className="button-primary text-uppercase mt-4 text-nowrap py-3">
+                <span className="h4 font-300">Varaa pöytä</span>
               </button>
             </Col>
           </Col>

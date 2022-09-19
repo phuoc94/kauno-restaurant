@@ -72,14 +72,14 @@ const Form = () => {
           component="h1"
           className="text-uppercase font-classique-saigon color-primary text-center py-5"
         >
-          get In touch
+          Ota Yhteyttä
         </Typography>
         <Box component="form" onSubmit={sendEmail}>
           <Row>
             <Col lg={6} className="p-3">
               <TextField
                 fullWidth
-                label="Name"
+                label="Nimi"
                 name="name"
                 value={formValues.name}
                 onChange={handleInputChange}
@@ -90,7 +90,7 @@ const Form = () => {
             <Col lg={6} className="p-3">
               <TextField
                 fullWidth
-                label="Email"
+                label="Sähköpostiosoite"
                 name="email"
                 value={formValues.email}
                 onChange={handleInputChange}
@@ -100,7 +100,7 @@ const Form = () => {
             </Col>
             <Col lg={12} className="p-3">
               <TextField
-                label="Message"
+                label="Viesti"
                 name="message"
                 value={formValues.message}
                 onChange={handleInputChange}
@@ -114,7 +114,7 @@ const Form = () => {
           <Row className="p-5">
             <Col className="d-flex justify-content-center">
               <button className="button-primary text-nowrap py-3" type="submit">
-                <span className="h5 font-300 text-uppercase">send</span>
+                <span className="h5 font-300 text-uppercase">Lähetä</span>
               </button>
             </Col>
           </Row>

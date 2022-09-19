@@ -18,35 +18,35 @@ const ContactAbout = () => {
               component="h3"
               className="font-classique-saigon text-uppercase color-seal-brown text-center"
             >
-              THE LIttle VIetnamese kItchen
+              The Little Viet Kitchen
             </Typography>
 
             <Row className="dashed-bottom py-3">
               <Col>
-                <Typography variant="h4" component="h3">
-                  <span className="font-weight-900">Open Time</span>
-                </Typography>
-              </Col>
-              <Col>
-                <Typography variant="h4" component="h3" className="text-end">
-                  Monday - Saturday
+                <Typography
+                  variant="h5"
+                  component="h3"
+                  className="d-flex justify-content-between"
+                >
+                  <span className="font-weight-bold">Aukioloaika</span>
+                  <span> Maanantaista - Lauantaihin</span>
                 </Typography>
               </Col>
             </Row>
             <Row className="dashed-bottom py-3">
               <Col>
-                <b>Mon-Tue</b>
+                <b>Ma-Ti</b>
                 <br />
                 10.00 - 17.30
               </Col>
               <Col className="text-center">
-                <b>Wed-Fri</b>
+                <b>Ke-Pe</b>
                 <br />
                 10.00 - 20.00
               </Col>
               <Col className="d-flex justify-content-end">
                 <span>
-                  <b>Sat</b>
+                  <b>La</b>
                   <br />
                   11.00 - 17.30
                 </span>
@@ -54,8 +54,8 @@ const ContactAbout = () => {
             </Row>
             <Row className="py-3">
               <Col>
-                We can be contacted via
-                <br /> email{' '}
+                Meihin saa yhteyttä sähköpostitse
+                <br />
                 <a
                   href="mailto:kaunocafe@gmail.com"
                   className="text-decoration-none"
@@ -65,7 +65,7 @@ const ContactAbout = () => {
                   </span>
                 </a>
                 <br />
-                or telephone on{' '}
+                tai puhelimitse{' '}
                 <a href="tel:+358400415224" className="text-decoration-none">
                   <span className="color-primary font-weight-bold">
                     0400415224
@@ -73,7 +73,7 @@ const ContactAbout = () => {
                 </a>
               </Col>
               <Col>
-                We are located at
+                Sijaitsemme osoitteessa
                 <br />
                 <a
                   href="https://goo.gl/maps/jS1BLFLHtYHxQuTM8"

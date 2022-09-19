@@ -12,13 +12,13 @@ const Footer = () => {
         <Row>
           <Col className="align-self-center my-2" sm={12} md={6} lg={4}>
             <p className="m-0">
-              <span className="font-weight-900">Mon-Tue:</span> 10.00 - 17.30
+              <span className="font-weight-900">Ma-Ti:</span> 10.00 - 17.30
             </p>
             <p className="m-0">
-              <span className="font-weight-900">Wed-Fri:</span> 10.00 - 20.00
+              <span className="font-weight-900">Ke-Pe:</span> 10.00 - 20.00
             </p>
             <p className="m-0">
-              <span className="font-weight-900">Sat:</span> 11.00 - 17.30
+              <span className="font-weight-900">La:</span> 11.00 - 17.30
             </p>
           </Col>
           <Col className="align-self-center my-2" sm={12} md={6} lg={4}>

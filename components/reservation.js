@@ -99,14 +99,14 @@ const Reservation = () => {
             Make a Reservation
           </Typography>
           <Typography variant="h5" component="h3">
-            Get in touch with the restaurant
+            Ota yhteyttä ravintolaan
           </Typography>
         </Col>
       </Row>
       {status === 'success' ? (
         <Box className="rsv-box d-flex justify-content-center align-items-center">
           <Typography variant="h5" component="h3">
-            Your message has been sent. We will contact you as soon as possible.
+            Viestisi on lähetetty. Otamme sinuun yhteyttä mahdollisimman pian.
           </Typography>
         </Box>
       ) : (
@@ -115,7 +115,7 @@ const Reservation = () => {
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <Col className="col-12 col-md-4 p-2">
                 <DatePicker
-                  label="Date"
+                  label="Päivämäärä"
                   value={date}
                   onChange={(newValue) => {
                     setDate(newValue);
@@ -127,7 +127,7 @@ const Reservation = () => {
               </Col>
               <Col className="col-12 col-md-4 p-2">
                 <TimePicker
-                  label="Time"
+                  label="Aika"
                   value={time}
                   ampm={false}
                   onChange={(newValue) => {
@@ -141,7 +141,7 @@ const Reservation = () => {
             </LocalizationProvider>
             <Col className="col-12 col-md-4 p-2">
               <FormControl fullWidth>
-                <InputLabel id="people-select-label">People</InputLabel>
+                <InputLabel id="people-select-label">Henkilöä</InputLabel>
                 <Select
                   labelId="people-select-label"
                   id="people-select"
@@ -153,23 +153,23 @@ const Reservation = () => {
                   }}
                   required
                 >
-                  <MenuItem value={1}>1 people</MenuItem>
-                  <MenuItem value={2}>2 people</MenuItem>
-                  <MenuItem value={3}>3 people</MenuItem>
-                  <MenuItem value={4}>4 people</MenuItem>
-                  <MenuItem value={5}>5 people</MenuItem>
-                  <MenuItem value={6}>6 people</MenuItem>
-                  <MenuItem value={7}>7 people</MenuItem>
-                  <MenuItem value={8}>8 people</MenuItem>
-                  <MenuItem value={9}>9 people</MenuItem>
-                  <MenuItem value={10}>10 people</MenuItem>
+                  <MenuItem value={1}>1 Henkilöä</MenuItem>
+                  <MenuItem value={2}>2 Henkilöä</MenuItem>
+                  <MenuItem value={3}>3 Henkilöä</MenuItem>
+                  <MenuItem value={4}>4 Henkilöä</MenuItem>
+                  <MenuItem value={5}>5 Henkilöä</MenuItem>
+                  <MenuItem value={6}>6 Henkilöä</MenuItem>
+                  <MenuItem value={7}>7 Henkilöä</MenuItem>
+                  <MenuItem value={8}>8 Henkilöä</MenuItem>
+                  <MenuItem value={9}>9 Henkilöä</MenuItem>
+                  <MenuItem value={10}>10 Henkilöä</MenuItem>
                 </Select>
               </FormControl>
             </Col>
             <Col className="col-12 col-md-6 p-2">
               <TextField
                 fullWidth
-                label="Email"
+                label="Sähköpostiosoite"
                 variant="outlined"
                 type="email"
                 name="email"
@@ -181,9 +181,9 @@ const Reservation = () => {
             <Col className="col-12 col-md-6 p-2">
               <TextField
                 fullWidth
-                label="Phone number"
+                label="Puhelinumero"
                 variant="outlined"
-                placeholder="Phone number"
+                placeholder="Puhelinumero"
                 type="tel"
                 name="phone"
                 value={formValues.name}
@@ -192,11 +192,11 @@ const Reservation = () => {
             </Col>
             <Col className="col-12 p-2">
               <TextField
-                label="Message"
+                label="Viesti"
                 fullWidth
                 id="outlined-multiline-static"
                 multiline
-                placeholder="Write here your special requests :)"
+                placeholder="Kirjoita tähän erityistoiveesi :)"
                 rows={4}
                 name="message"
                 value={formValues.name}
@@ -210,7 +210,7 @@ const Reservation = () => {
                 className="button-primary mt-4 text-nowrap py-3"
                 type="submit"
               >
-                <span className="h4 font-300">BOOK A TABLE</span>
+                <span className="h4 text-uppercase font-300">Varaa pöytä</span>
               </button>
             </Col>
           </Row>
@@ -221,13 +221,11 @@ const Reservation = () => {
         <Alert onClose={handleClose} severity={status} sx={{ width: '100%' }}>
           {status === 'success' ? (
             <span>
-              Your message has been sent. We will contact you as soon as
-              possible.
+              Viestisi on lähetetty. Otamme sinuun yhteyttä mahdollisimman pian.
             </span>
           ) : (
             <span>
-              Something went wrong. Please try again later or contact us
-              directly.
+              Jotain meni pieleen. Yritä myöhemmin uudelleen tai ota meihin yhteyttä suoraan.
             </span>
           )}
         </Alert>

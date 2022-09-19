@@ -18,23 +18,23 @@ const AboutSection = () => {
                 The Little Vietnamese Kitchen
               </Typography>
               <p className="about-text">
-                Our beloved Kauno is located at the heart of{' '}
+                Rakas Kaunomme sijaitsee{' '}
                 <span className="color-d-sienna font-weight-bold">
-                  Hämeenlinna
+                  Hämeenlinnan keskuksessä.
                 </span>
-                . We serve warming dishes with the touch of Asian cultures and
-                sophistication. Come and enjoy our{' '}
+                Tarjoamme lämmittäviä ruokia aasialaisten kulttuurien ja
+                hienostuneisuuden kanssa. Tule nauttimaan lohduttavasta{' '}
                 <span className="color-seal-brown font-weight-bold font-italic">
-                  comforting bowl of Pho
+                  Pho-kulhostamme
                 </span>{' '}
-                or{' '}
+                Tai{' '}
                 <span className="color-primary font-weight-bold font-italic">
-                  a refreshing spring roll dish.
+                  virkistävästä kevätrullaruoasta.
                 </span>
               </p>
               <Link href="/about-us">
-                <button className="button-primary mt-5 text-nowrap py-3">
-                  <span className="h5 font-300">READ MORE</span>
+                <button className="button-primary text-uppercase mt-5 text-nowrap py-3">
+                  <span className="h5 font-300">lue lisää</span>
                 </button>
               </Link>
             </Col>

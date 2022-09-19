@@ -21,19 +21,19 @@ const CustomNavbar = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="justify-content-center w-100 h3 font-300 color-primary text-center">
               <Link href="/" passHref>
-                <Nav.Link className="mx-1">Home</Nav.Link>
+                <Nav.Link className="mx-1">Etusivu</Nav.Link>
               </Link>
               <Link href="/menu" passHref>
                 <Nav.Link className="mx-1">Menu</Nav.Link>
               </Link>
               <Link href="/about-us" passHref>
-                <Nav.Link className="mx-1">About Us</Nav.Link>
+                <Nav.Link className="mx-1">Meistä</Nav.Link>
               </Link>
               <Link href="/contact-us" passHref>
-                <Nav.Link className="mx-1 d-lg-none">Contact Us</Nav.Link>
+                <Nav.Link className="mx-1 d-lg-none">Ota yhteyttä</Nav.Link>
               </Link>
               <Link href="/contact-us#reservation" passHref>
-                <Nav.Link className="mx-1 d-lg-none">Book A Table</Nav.Link>
+                <Nav.Link className="mx-1 d-lg-none">Varaa pöytä</Nav.Link>
               </Link>
               {/*
               <NavDropdown title="EN" id="basic-nav-dropdown" className="mx-1">
@@ -48,15 +48,15 @@ const CustomNavbar = () => {
             </Nav>
             <div className="col-lg-3 col-12 text-center d-none d-lg-block">
               <Link href="/contact-us">
-                <button className="button-secondary text-nowrap py-3 p-2 m-1 button">
-                  <span className="h4 font-300 text-center">CONTACT US</span>
+                <button className="button-secondary text-uppercase text-nowrap py-3 p-2 m-1 button">
+                  <span className="h4 font-300 text-center">Ota yhteyttä</span>
                 </button>
               </Link>
             </div>
             <div className="col-lg-3 col-12 text-center d-none d-lg-block">
               <Link href="/contact-us#reservation">
-                <button className="button-primary text-nowrap py-3 p-2 m-1 button">
-                  <span className="h4 font-300 text-center">BOOK A TABLE</span>
+                <button className="button-primary text-uppercase text-nowrap py-3 p-2 m-1 button">
+                  <span className="h4 font-300 text-center">Varaa pöytä</span>
                 </button>
               </Link>
             </div>

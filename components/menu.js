@@ -30,8 +30,8 @@ const MenuSection = () => {
         <Row>
           <Col className="d-flex justify-content-center">
             <Link href="/menu">
-              <button className="button-primary mt-5 text-nowrap py-3">
-                <span className="h5 font-300">READ MORE</span>
+              <button className="button-primary text-uppercase mt-5 text-nowrap py-3">
+                <span className="h5 font-300">lue lisää</span>
               </button>
             </Link>
           </Col>

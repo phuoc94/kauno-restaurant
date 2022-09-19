@@ -23,58 +23,58 @@ export default function AboutUs() {
       </Col>
       <Container fluid>
         <Row>
-        <Col className='col-lg-2 	d-none d-lg-block'>
-        
-        </Col>
-        <Col className="px-6 wwa-text col-lg-8 col-12">
-          <Typography
-            variant="h3"
-            component="h2"
-            className="text-uppercase font-classique-saigon color-primary text-center p-5"
-          >
-            who we are
-          </Typography>
-          <Typography variant="h6" component="p" className="text-center py-2">
-            Our beloved Kauno, founded in 2014 and based in{' '}
-            <span className="font-weight-900 color-d-sienna">Hämeenlina</span>,
-            is on a mission to offer Asian cuisine, particularly Vietnamese
-            cuisine, to the locals.
-          </Typography>
-          <Typography variant="h6" component="p" className="text-center py-2">
-            We specialize on warming foods and beverages with a touch of Asian
-            influences and sophistication that are both healthful and fun to
-            enjoy.
-          </Typography>
-          <Typography variant="h6" component="p" className="text-center py-2">
-            Here you are welcomed to dine in or take away.
-          </Typography>
-          <Typography
-            variant="h6"
-            component="p"
-            className="text-center py-2 pb-5"
-          >
-            Come and try out our{' '}
-            <span className="font-weight-900 color-seal-brown">
-              comforting bowl of Pho
-            </span>{' '}
-            or{' '}
-            <span className="font-weight-900 color-primary">
-              a refreshing spring roll dish
-            </span>
-            , or simply{' '}
-            <b>
-              <span className="font-weight-900 color-copper-red">
-                a cup of boba milk tea
+          <Col className="col-lg-2 	d-none d-lg-block"></Col>
+          <Col className="px-6 wwa-text col-lg-8 col-12">
+            <Typography
+              variant="h3"
+              component="h2"
+              className="text-uppercase font-classique-saigon color-primary text-center p-5"
+            >
+              who we are
+            </Typography>
+            <Typography variant="h6" component="p" className="text-center py-2">
+              Vuonna 2014 perustettu ja{' '}
+              <span className="font-weight-900 color-d-sienna">
+                Hämeenlinnassa
               </span>
-            </b>
-            .
-          </Typography>
-        </Col>
-        <Col className='col-lg-2 	col-12'>
-          <Col className='d-flex align-items-end justify-content-end h-100 image'>
-          <Image src={Boba} alt="bg-image" />
+              , toimiva rakas Kaunomme missio on tajota aasialaista, erityisesti
+              Vietnamilaista ruokaa paikallisille.
+            </Typography>
+            <Typography variant="h6" component="p" className="text-center py-2">
+              Olemme erikoistuneet lämmittäviin ruokiin ja juomiin, joissa on
+              aasialaisia vaikutteita ja hienostuneisuutta, jotka ovat sekä
+              terveellisiä että hauskoja nauttia.
+            </Typography>
+            <Typography variant="h6" component="p" className="text-center py-2">
+              Tänne olet tervetullut ruokailemaan tai mukaan.
+            </Typography>
+            <Typography
+              variant="h6"
+              component="p"
+              className="text-center py-2 pb-5"
+            >
+              Tule kokeilemaan{' '}
+              <span className="font-weight-900 color-seal-brown">
+                ohdullista Pho-kulhoamme
+              </span>{' '}
+              tai{' '}
+              <span className="font-weight-900 color-primary">
+                virkistävää kevätrullaruokaa
+              </span>
+              tai yksinkertaisesti{' '}
+              <b>
+                <span className="font-weight-900 color-copper-red">
+                  kupillista bobamaitoteetä.
+                </span>
+              </b>
+              .
+            </Typography>
           </Col>
-        </Col>
+          <Col className="col-lg-2 	col-12">
+            <Col className="d-flex align-items-end justify-content-end h-100 image">
+              <Image src={Boba} alt="bg-image" />
+            </Col>
+          </Col>
         </Row>
       </Container>
       <Col className="py-5 bg-culture">
@@ -94,14 +94,14 @@ export default function AboutUs() {
                 component="h4"
                 className="text-center p-2"
               >
-                Premium Quality
+                Ykköslaatua
               </Typography>
               <Typography
                 variant="h6"
                 component="p"
                 className="text-center p-2"
               >
-                We aim at bringing excellent quality food to our customer
+                Tavoitteenamme on tuoda asiakkaillemme laadukasta ruokaa.
               </Typography>
             </Col>
             <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
@@ -112,14 +112,15 @@ export default function AboutUs() {
                 component="h4"
                 className="text-center p-2"
               >
-                Seasonal Vegetables
+                Kauden Vihannekset
               </Typography>
               <Typography
                 variant="h6"
                 component="p"
                 className="text-center p-2"
               >
-                Fresh, seasonal veggies from Finnish farms are well-loved here
+                Tuoreet, sesongin kasvikset suomalaisilta maatiloilta ovat
+                täällä suosittuja.
               </Typography>
             </Col>
             <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
@@ -130,15 +131,15 @@ export default function AboutUs() {
                 component="h4"
                 className="text-center p-2"
               >
-                Fresh Fruit
+                Tuore hedelmä
               </Typography>
               <Typography
                 variant="h6"
                 component="p"
                 className="text-center p-2"
               >
-                Fresh fruits are used to make wonderful, refreshing drinks that
-                will brighten your day
+                Tuoreista hedelmistä tehdään upeita, virkistäviä juomia, jotka
+                piristävät päivääsi.
               </Typography>
             </Col>
           </Row>
