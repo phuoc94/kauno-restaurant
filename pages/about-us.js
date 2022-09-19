@@ -8,10 +8,14 @@ import Fish from '../public/assets/aboutus/Fish.svg';
 import Carrot from '../public/assets/aboutus/Carrot.svg';
 import Lime from '../public/assets/aboutus/Lime.svg';
 import Boba from '../public/assets/aboutus/Boba.svg';
+import Head from 'next/head';
 
 export default function AboutUs() {
   return (
     <Layout>
+      <Head>
+        <title>Meistä - Kauno</title>
+      </Head>
       <Col className="vh-100 d-flex align-items-center justify-content-center bg-about-us">
         <Typography
           variant="h2"
