@@ -13,7 +13,7 @@ const Starter = () => {
         <Typography
           variant="h3"
           component="h3"
-          className="font-weight-bold text-center"
+          className="font-classique-saigon text-center"
         >
           Alkuruoka
         </Typography>

@@ -13,7 +13,7 @@ const HeroSection = () => {
             className="text-center d-flex align-items-center justify-content-center h-100"
           >
             <Col>
-              <h1 className="color-primary display-2 font-weight-bold">
+              <h1 className="color-primary display-2 font-classique-saigon">
                 Tervetuloa pieneen Vietnamilaiseen keittiöön
               </h1>
               <Link href="/contact-us#reservation" passHref>

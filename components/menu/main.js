@@ -13,7 +13,7 @@ const Main = () => {
         <Typography
           variant="h3"
           component="h3"
-          className="font-weight-bold text-center color-primary"
+          className="font-classique-saigon text-center color-primary"
         >
           Pääruoka
         </Typography>

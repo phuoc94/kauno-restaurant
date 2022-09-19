@@ -48,7 +48,7 @@ a {
 .font-classique-saigon {
   //font-family: 'ClassiqueSaigon';
   font-family: 'ClassiqueSaigon' !important;
-  font-weight: 900;
+  font-weight: bold !important;
 }
 
 .color-primary {
