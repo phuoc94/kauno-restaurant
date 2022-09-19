@@ -47,7 +47,8 @@ a {
 
 .font-classique-saigon {
   //font-family: 'ClassiqueSaigon';
-  font-family: 'ClassiqueSaigon', 'Montserrat' !important;
+  font-family: 'Montserrat' !important;
+  font-weight: bold !important;
 }
 
 .color-primary {
