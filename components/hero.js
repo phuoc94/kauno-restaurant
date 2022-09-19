@@ -13,9 +13,9 @@ const HeroSection = () => {
             className="text-center d-flex align-items-center justify-content-center h-100"
           >
             <Col>
-              <Typography variant="h2" component="h1" className="color-primary">
+              <h1 className="color-primary display-2">
                 Tervetuloa pieneen Vietnamilaiseen keittiöön
-              </Typography>
+              </h1>
               <Link href="/contact-us#reservation" passHref>
                 <button className="button-primary text-uppercase mt-4 text-nowrap py-3">
                   <span className="h4 font-300">Varaa pöytä</span>
