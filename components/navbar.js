@@ -29,6 +29,12 @@ const CustomNavbar = () => {
               <Link href="/about-us" passHref>
                 <Nav.Link className="mx-1">About Us</Nav.Link>
               </Link>
+              <Link href="/contact-us" passHref>
+                <Nav.Link className="mx-1 d-lg-none">Contact Us</Nav.Link>
+              </Link>
+              <Link href="/contact-us#reservation" passHref>
+                <Nav.Link className="mx-1 d-lg-none">Book A Table</Nav.Link>
+              </Link>
               {/*
               <NavDropdown title="EN" id="basic-nav-dropdown" className="mx-1">
                 <NavDropdown.Item href="#action/3.2">
@@ -40,14 +46,14 @@ const CustomNavbar = () => {
               </NavDropdown>
   */}
             </Nav>
-            <div className='col-lg-3 col-12 text-center'>
+            <div className="col-lg-3 col-12 text-center d-none d-lg-block">
               <Link href="/contact-us">
-              <button className="button-secondary text-nowrap py-3 p-2 m-1 button">
-                <span className="h4 font-300 text-center">CONTACT US</span>
-              </button>
+                <button className="button-secondary text-nowrap py-3 p-2 m-1 button">
+                  <span className="h4 font-300 text-center">CONTACT US</span>
+                </button>
               </Link>
             </div>
-            <div className='col-lg-3 col-12 text-center'>
+            <div className="col-lg-3 col-12 text-center d-none d-lg-block">
               <Link href="/contact-us#reservation">
                 <button className="button-primary text-nowrap py-3 p-2 m-1 button">
                   <span className="h4 font-300 text-center">BOOK A TABLE</span>

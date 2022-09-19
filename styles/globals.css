@@ -83,6 +83,7 @@ a {
 }
 
 .button-primary {
+  font-family: 'Montserrat';
   background-color: #4e603e;
   color: #fff;
   border: none;
@@ -95,6 +96,7 @@ a {
 }
 
 .button-secondary {
+  font-family: 'Montserrat';
   color: #4e603e !important;
   border: 1px solid #4e603e !important;
   background-color: #fff !important;
@@ -192,9 +194,6 @@ a {
   background-repeat: no-repeat, no-repeat;
   background-size: 45%, 15%;
   background-position: left bottom, left top;
-}
-.button {
-  width: 170px;
 }
 
 .rsv-box {
