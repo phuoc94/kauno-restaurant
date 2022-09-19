@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { Col, Container, Row } from 'react-bootstrap';
 import menu from '../../data/menu.json';
-import MenuItem from '../menuItem';
+import DrinkItem from '../drinkItem';
 
 const Drink = () => {
   const drinks = menu.drink;
@@ -25,7 +25,7 @@ const Drink = () => {
 
         <Row>
           {drinks.map((item) => (
-            <MenuItem key={item.title} item={item} md={6} />
+            <DrinkItem key={item.title} item={item} md={6} />
           ))}
         </Row>
       </Container>

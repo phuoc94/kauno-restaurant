@@ -117,6 +117,9 @@ a {
 .dashed-bottom {
   border-bottom: 1px dashed #662c0af4;
 }
+.dashed-bottom-cream {
+  border-bottom: 1px dashed #e6d3bc;
+}
 
 .mh-80 {
   min-height: 80px;
