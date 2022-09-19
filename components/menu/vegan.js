@@ -11,7 +11,7 @@ const Vegan = () => {
         <Typography
           variant="h3"
           component="h3"
-          className="font-weight-bold text-center"
+          className="font-weight-bold text-center color-primary"
         >
           Vegan menu
         </Typography>

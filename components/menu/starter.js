@@ -8,7 +8,7 @@ import img from '../../public/assets/menu/lohiBowl.svg';
 const Starter = () => {
   const starters = menu.starter;
   return (
-    <div className="bg-culture starters">
+    <div className="bg-culture starters color-primary">
       <Container className="py-5">
         <Typography
           variant="h3"

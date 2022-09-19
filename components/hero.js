@@ -12,7 +12,7 @@ const HeroSection = () => {
             className="text-center d-flex align-items-center justify-content-center h-100"
           >
             <Col className="w-60">
-              <Typography variant="h2" component="h1">
+              <Typography variant="h2" component="h1" className="color-primary">
                 Welcome to the Little Vietnamese kitchen
               </Typography>
               <button className="button-primary mt-4 text-nowrap py-3">
