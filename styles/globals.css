@@ -172,8 +172,8 @@ a {
   left: -12px;
 }
 .image {
-rotate: 15deg;
-overflow: hidden;
+  rotate: 15deg;
+  overflow: hidden;
 }
 
 .starters {
@@ -193,6 +193,10 @@ overflow: hidden;
 .button {
   width: 170px;
 }
+
+.rsv-box {
+  height: 350px;
+}
 @media only screen and (max-width: 991px) {
   .contact-about {
     background-image: url('/assets/contactus/Vector90.svg');
@@ -209,7 +213,7 @@ overflow: hidden;
   .contact-about-image {
     width: 10%;
     display: none;
-  } 
+  }
   .image {
     transform: translateY(-100px);
     margin-right: 45px;
@@ -231,8 +235,4 @@ overflow: hidden;
     transform: translateY(70%) rotate(15deg);
     z-index: -1;
   }
- 
-
-
 }
-

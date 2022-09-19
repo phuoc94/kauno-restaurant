@@ -17,6 +17,7 @@ import Box from '@mui/material/Box';
 import Snackbar from '@mui/material/Snackbar';
 import Alert from './alert';
 import emailjs from 'emailjs-com';
+import { MdHomeWork } from 'react-icons/md';
 
 const defaultValues = {
   date: new Date(),
@@ -51,9 +52,11 @@ const Reservation = () => {
 
   function sendEmail(e) {
     e.preventDefault();
-
+    const today = new Date();
     let templateParams = {
-      date: `${date.$D}.${date.$M + 1}.${date.$y}`,
+      date: !date.getDate()
+        ? `${date.$D}.${date.$M + 1}.${date.$y}`
+        : `${today.getDate()}.${today.getMonth() + 1}.${today.getFullYear()}`,
       time: `${time.$H}:${time.$m}`,
       people,
       email: formValues.email,
@@ -100,111 +103,120 @@ const Reservation = () => {
           </Typography>
         </Col>
       </Row>
-      <Box component="form" onSubmit={sendEmail}>
-        <Row>
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+      {status === 'success' ? (
+        <Box className="rsv-box d-flex justify-content-center align-items-center">
+          <Typography variant="h5" component="h3">
+            Your message has been sent. We will contact you as soon as possible.
+          </Typography>
+        </Box>
+      ) : (
+        <Box component="form" onSubmit={sendEmail}>
+          <Row>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <Col className="col-12 col-md-4 p-2">
+                <DatePicker
+                  label="Date"
+                  value={date}
+                  onChange={(newValue) => {
+                    setDate(newValue);
+                  }}
+                  renderInput={(params) => (
+                    <TextField {...params} className="w-100" required />
+                  )}
+                />
+              </Col>
+              <Col className="col-12 col-md-4 p-2">
+                <TimePicker
+                  label="Time"
+                  value={time}
+                  ampm={false}
+                  onChange={(newValue) => {
+                    setTime(newValue);
+                  }}
+                  renderInput={(params) => (
+                    <TextField {...params} className="w-100" required />
+                  )}
+                />
+              </Col>
+            </LocalizationProvider>
             <Col className="col-12 col-md-4 p-2">
-              <DatePicker
-                label="Date"
-                value={date}
-                onChange={(newValue) => {
-                  setDate(newValue);
-                }}
-                renderInput={(params) => (
-                  <TextField {...params} className="w-100" required />
-                )}
-              />
+              <FormControl fullWidth>
+                <InputLabel id="people-select-label">People</InputLabel>
+                <Select
+                  labelId="people-select-label"
+                  id="people-select"
+                  value={people}
+                  label="People"
+                  name="people"
+                  onChange={(e) => {
+                    setPeople(e.target.value);
+                  }}
+                  required
+                >
+                  <MenuItem value={1}>1 people</MenuItem>
+                  <MenuItem value={2}>2 people</MenuItem>
+                  <MenuItem value={3}>3 people</MenuItem>
+                  <MenuItem value={4}>4 people</MenuItem>
+                  <MenuItem value={5}>5 people</MenuItem>
+                  <MenuItem value={6}>6 people</MenuItem>
+                  <MenuItem value={7}>7 people</MenuItem>
+                  <MenuItem value={8}>8 people</MenuItem>
+                  <MenuItem value={9}>9 people</MenuItem>
+                  <MenuItem value={10}>10 people</MenuItem>
+                </Select>
+              </FormControl>
             </Col>
-            <Col className="col-12 col-md-4 p-2">
-              <TimePicker
-                label="Time"
-                value={time}
-                ampm={false}
-                onChange={(newValue) => {
-                  setTime(newValue);
-                }}
-                renderInput={(params) => (
-                  <TextField {...params} className="w-100" required />
-                )}
-              />
-            </Col>
-          </LocalizationProvider>
-          <Col className="col-12 col-md-4 p-2">
-            <FormControl fullWidth>
-              <InputLabel id="people-select-label">People</InputLabel>
-              <Select
-                labelId="people-select-label"
-                id="people-select"
-                value={people}
-                label="People"
-                name="people"
-                onChange={(e) => {
-                  setPeople(e.target.value);
-                }}
+            <Col className="col-12 col-md-6 p-2">
+              <TextField
+                fullWidth
+                label="Email"
+                variant="outlined"
+                type="email"
+                name="email"
+                value={formValues.name}
+                onChange={handleInputChange}
                 required
+              />
+            </Col>
+            <Col className="col-12 col-md-6 p-2">
+              <TextField
+                fullWidth
+                label="Phone number"
+                variant="outlined"
+                placeholder="Phone number"
+                type="tel"
+                name="phone"
+                value={formValues.name}
+                onChange={handleInputChange}
+              />
+            </Col>
+            <Col className="col-12 p-2">
+              <TextField
+                label="Message"
+                fullWidth
+                id="outlined-multiline-static"
+                multiline
+                placeholder="Write here your special requests :)"
+                rows={4}
+                name="message"
+                value={formValues.name}
+                onChange={handleInputChange}
+              />
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col className="d-flex justify-content-center">
+              <button
+                className="button-primary mt-4 text-nowrap py-3"
+                type="submit"
               >
-                <MenuItem value={1}>1 people</MenuItem>
-                <MenuItem value={2}>2 people</MenuItem>
-                <MenuItem value={3}>3 people</MenuItem>
-                <MenuItem value={4}>4 people</MenuItem>
-                <MenuItem value={5}>5 people</MenuItem>
-                <MenuItem value={6}>6 people</MenuItem>
-                <MenuItem value={7}>7 people</MenuItem>
-                <MenuItem value={8}>8 people</MenuItem>
-                <MenuItem value={9}>9 people</MenuItem>
-                <MenuItem value={10}>10 people</MenuItem>
-              </Select>
-            </FormControl>
-          </Col>
-          <Col className="col-12 col-md-6 p-2">
-            <TextField
-              fullWidth
-              label="Email"
-              variant="outlined"
-              type="email"
-              name="email"
-              value={formValues.name}
-              onChange={handleInputChange}
-              required
-            />
-          </Col>
-          <Col className="col-12 col-md-6 p-2">
-            <TextField
-              fullWidth
-              label="Phone number"
-              variant="outlined"
-              placeholder="Phone number"
-              type="tel"
-              name="phone"
-              value={formValues.name}
-              onChange={handleInputChange}
-            />
-          </Col>
-          <Col className="col-12 p-2">
-            <TextField
-              label="Message"
-              fullWidth
-              id="outlined-multiline-static"
-              multiline
-              placeholder="Write here your special requests :)"
-              rows={4}
-              name="message"
-              value={formValues.name}
-              onChange={handleInputChange}
-            />
-          </Col>
-        </Row>
-        <Row className="mt-4">
-          <Col className="d-flex justify-content-center">
-            <button
-              className="button-primary mt-4 text-nowrap py-3"
-              type="submit"
-            >
-              <span className="h4 font-300">BOOK A TABLE</span>
-            </button>
-          </Col>
-        </Row>
-      </Box>
+                <span className="h4 font-300">BOOK A TABLE</span>
+              </button>
+            </Col>
+          </Row>
+        </Box>
+      )}
+
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={status} sx={{ width: '100%' }}>
           {status === 'success' ? (
