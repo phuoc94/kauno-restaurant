@@ -3,15 +3,14 @@ import { Typography } from '@mui/material';
 const HeroSection = () => {
   return (
     <section>
-      <Container fluid className="hero bg-home-hero-food">
+      <Container fluid className="hero">
         <Row className="h-100">
           <Col
-            lg={6}
-            md={8}
-            sm={12}
+            lg={5}
+            md={12}
             className="text-center d-flex align-items-center justify-content-center h-100"
           >
-            <Col className="w-60">
+            <Col>
               <Typography variant="h2" component="h1" className="color-primary">
                 Welcome to the Little Vietnamese kitchen
               </Typography>
@@ -20,6 +19,7 @@ const HeroSection = () => {
               </button>
             </Col>
           </Col>
+          <Col lg={7} md={12} className="bg-home-hero-food" />
           <Col />
         </Row>
       </Container>

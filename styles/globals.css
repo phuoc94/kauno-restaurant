@@ -139,15 +139,10 @@ a {
 
 .hero {
   height: 100vh;
+  background-image: url('/assets/home/HeroWebsite.png');
+  background-size: cover;
 }
 
-.bg-home-hero-food {
-  background-color: #f8f6f1;
-  background-image: url('/assets/home/hero-food.svg');
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 964px 697px;
-}
 
 .about-text {
   font-size: 1.125rem;
@@ -220,14 +215,13 @@ a {
     transform: translateY(-100px);
     margin-right: 45px;
   }
-}
-
-@media only screen and (max-width: 767px) {
   .hero {
     background-image: url('/assets/HeroMobile.png');
     background-size: cover;
   }
+}
 
+@media only screen and (max-width: 767px) {
   .hero-text {
     font-size: 2rem;
   }
