@@ -15,14 +15,14 @@ const Main = () => {
           component="h3"
           className="font-weight-bold text-center color-primary"
         >
-          Main courses
+          Pääruoka
         </Typography>
         <Typography
           variant="h5"
           component="h4"
           className="text-center d-none d-lg-block"
         >
-          Enjoy our tasty and perfectly cooked dishes
+          Nauti maustasi ja täydellisesti valmistetuista ruoista
         </Typography>
 
         <Row>

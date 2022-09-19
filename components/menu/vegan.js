@@ -13,7 +13,7 @@ const Vegan = () => {
           component="h3"
           className="font-weight-bold text-center color-primary"
         >
-          Vegan menu
+          Kasvisruoka
         </Typography>
 
         <Row>

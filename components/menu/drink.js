@@ -13,14 +13,14 @@ const Drink = () => {
           component="h3"
           className="font-weight-bold text-center"
         >
-          Deserts - Drinks
+          Jälkiruoat – Juomat
         </Typography>
         <Typography
           variant="h5"
           component="h4"
           className="text-center d-none d-lg-block"
         >
-          Here are our refreshing drinks and deserts
+          Tässä ovat virkistävät juomamme ja jälkiruoamme
         </Typography>
 
         <Row>

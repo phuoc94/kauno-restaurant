@@ -15,14 +15,14 @@ const Starter = () => {
           component="h3"
           className="font-weight-bold text-center"
         >
-          Starters
+          Alkuruoka
         </Typography>
         <Typography
           variant="h5"
           component="h4"
           className="text-center d-none d-lg-block"
         >
-          Start off your dining with a delicious beginning
+          Aloita ruokailusi herkullisella alkuruoalla
         </Typography>
 
         <Row>
