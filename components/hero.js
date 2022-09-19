@@ -1,5 +1,7 @@
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import { Typography } from '@mui/material';
+import Link from 'next/link';
+
 const HeroSection = () => {
   return (
     <section>
@@ -14,9 +16,11 @@ const HeroSection = () => {
               <Typography variant="h2" component="h1" className="color-primary">
                 Tervetuloa pieneen Vietnamilaiseen keittiöön
               </Typography>
-              <button className="button-primary text-uppercase mt-4 text-nowrap py-3">
-                <span className="h4 font-300">Varaa pöytä</span>
-              </button>
+              <Link href="/contact-us#reservation" passHref>
+                <button className="button-primary text-uppercase mt-4 text-nowrap py-3">
+                  <span className="h4 font-300">Varaa pöytä</span>
+                </button>
+              </Link>
             </Col>
           </Col>
           <Col lg={7} md={12} className="bg-home-hero-food" />
