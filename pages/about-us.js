@@ -20,12 +20,12 @@ export default function AboutUs() {
         <Typography
           variant="h2"
           component="h1"
-          className="text-uppercase font-classique-saigon color-white text-center"
+          className="font-classique-saigon color-white text-center hero-text-border"
         >
-          the little viet kitchen
+          The Little Viet Kitchen
         </Typography>
       </Col>
-      <Container fluid>
+      <Container>
         <Row>
           <Col className="col-lg-2 	d-none d-lg-block"></Col>
           <Col className="px-6 wwa-text col-lg-8 col-12">
@@ -34,7 +34,7 @@ export default function AboutUs() {
               component="h2"
               className="text-uppercase font-classique-saigon color-primary text-center p-5"
             >
-              who we are
+              KEITÄ OLEMME?
             </Typography>
             <Typography variant="h6" component="p" className="text-center py-2">
               Vuonna 2014 perustettu ja{' '}
@@ -87,7 +87,7 @@ export default function AboutUs() {
           component="h2"
           className="text-uppercase font-classique-saigon color-primary text-center"
         >
-          Our values
+          MEIDÄN Arvomme
         </Typography>
         <Container>
           <Row className="mt-3">
