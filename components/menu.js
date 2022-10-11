@@ -17,7 +17,7 @@ const MenuSection = () => {
                 component="h2"
                 className="font-classique-saigon color-primary"
               >
-                Our Menu
+                Menu
               </Typography>
             </Col>
           </Col>

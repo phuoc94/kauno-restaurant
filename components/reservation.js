@@ -96,7 +96,7 @@ const Reservation = () => {
             component="h3"
             className="font-classique-saigon text-uppercase color-primary"
           >
-            Make a Reservation
+            Varaa pöytä
           </Typography>
           <Typography variant="h5" component="h3">
             Ota yhteyttä ravintolaan
@@ -225,7 +225,8 @@ const Reservation = () => {
             </span>
           ) : (
             <span>
-              Jotain meni pieleen. Yritä myöhemmin uudelleen tai ota meihin yhteyttä suoraan.
+              Jotain meni pieleen. Yritä myöhemmin uudelleen tai ota meihin
+              yhteyttä suoraan.
             </span>
           )}
         </Alert>
