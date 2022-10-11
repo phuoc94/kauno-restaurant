@@ -234,8 +234,12 @@ a {
     margin-right: 45px;
   }
   .hero {
-    background-image: url('/assets/HeroMobile.png');
-    background-size: cover;
+    background: url('/assets/home/mobile/TopLeft.png') left top no-repeat,
+      url('/assets/home/mobile/BottomRight.svg') right bottom no-repeat,
+      url('/assets/home/mobile/BottomLeft.svg') left bottom no-repeat,
+      url('/assets/home/mobile/TopRight.svg') right top no-repeat;
+
+    background-size: 200px, 150px, 200px, 150px;
   }
 }
 
