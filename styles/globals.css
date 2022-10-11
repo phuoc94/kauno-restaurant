@@ -150,6 +150,10 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.menu-drink-bg {
+  position: absolute;
+  transform: translateY(7px);
+}
 
 .hero {
   height: 100vh;

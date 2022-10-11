@@ -2,6 +2,9 @@ import { Typography } from '@mui/material';
 import { Col, Container, Row } from 'react-bootstrap';
 import menu from '../../data/menu.json';
 import DrinkItem from '../drinkItem';
+import Image from 'next/image';
+import img from '../../public/assets/menu/2boba.svg';
+import bgimg from '../../public/assets/menu/WhiteVector.svg';
 
 const Drink = () => {
   const drinks = menu.drink;
@@ -29,6 +32,14 @@ const Drink = () => {
           ))}
         </Row>
       </Container>
+      <div className="menu-bg-image d-flex justify-content-end align-items-end bg-test ">
+        <div className="menu-drink-bg">
+          <Image src={bgimg} alt="bg-image" />
+        </div>
+        <div>
+          <Image src={img} alt="bg-image" />
+        </div>
+      </div>
     </div>
   );
 };
