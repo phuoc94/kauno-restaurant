@@ -92,7 +92,9 @@ a {
 .font-weight-900 {
   font-weight: 900;
 }
-
+.mt-170 {
+  margin-top: 170px;
+}
 .button-primary {
   font-family: 'Montserrat';
   background-color: #4e603e;
@@ -221,9 +223,10 @@ a {
     z-indez: -1;
   }
   .bg-contact-about-image {
-    background-image: url('/assets/contactus/Hero-ContactUs.svg');
-    z-index: -2;
-    left: 12px;
+    background: url('/assets/contactus/Hero-ContactUs.svg') left 36px top 14px
+        no-repeat,
+      url('/assets/contactus/GreenVector_mobile.svg') left 0px top 0px no-repeat;
+    background-size: 152px, 230px;
   }
   .contact-about-image {
     width: 10%;

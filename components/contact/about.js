@@ -16,7 +16,7 @@ const ContactAbout = () => {
             <Typography
               variant="h3"
               component="h3"
-              className="font-classique-saigon color-seal-brown text-center font-weight-700"
+              className="font-classique-saigon color-seal-brown text-center font-weight-700 mt-170"
             >
               The Little Viet Kitchen
             </Typography>

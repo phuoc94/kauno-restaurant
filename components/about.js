@@ -5,7 +5,7 @@ import Link from 'next/link';
 const AboutSection = () => {
   return (
     <div className="about-section bg-culture">
-      <Container className="vh-100 ">
+      <Container className="vh-100">
         <Row className="h-100 mt-5">
           <Col md={5} className="bg-about d-none d-md-block" />
           <Col className="text-center d-flex align-items-center">
@@ -17,7 +17,7 @@ const AboutSection = () => {
               >
                 The Little Vietnamese Kitchen
               </Typography>
-              <p className="about-text">
+              <p className="about-text mt-3">
                 Rakas Kaunomme sijaitsee{' '}
                 <span className="color-d-sienna font-weight-bold">
                   Hämeenlinnan keskuksessä.
