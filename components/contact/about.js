@@ -29,7 +29,7 @@ const ContactAbout = () => {
                   className="d-flex justify-content-between"
                 >
                   <span className="font-weight-bold">Aukioloaika</span>
-                  <span> Maanantaista - Lauantaihin</span>
+                  <span>Ma - La</span>
                 </Typography>
               </Col>
             </Row>

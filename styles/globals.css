@@ -244,6 +244,10 @@ a {
     font-size: 2rem;
   }
 
+  .menu-bg {
+    background: none;
+  }
+
   .bg-boba {
     position: fixed;
     transform: translateY(70%) rotate(15deg);
