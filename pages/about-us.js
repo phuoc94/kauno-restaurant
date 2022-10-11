@@ -28,11 +28,11 @@ export default function AboutUs() {
       <Container>
         <Row>
           <Col className="col-lg-2 	d-none d-lg-block"></Col>
-          <Col className="px-6 wwa-text col-lg-8 col-12">
+          <Col className="px-7 wwa-text col-lg-8 col-12 py-6">
             <Typography
               variant="h3"
               component="h2"
-              className="text-uppercase font-classique-saigon color-primary text-center p-5"
+              className="text-uppercase font-classique-saigon color-primary text-center"
             >
               KEITÄ OLEMME?
             </Typography>
@@ -55,7 +55,7 @@ export default function AboutUs() {
             <Typography
               variant="h6"
               component="p"
-              className="text-center py-2 pb-5"
+              className="text-center py-2 pb-3"
             >
               Tule kokeilemaan{' '}
               <span className="font-weight-900 color-seal-brown">
@@ -81,7 +81,7 @@ export default function AboutUs() {
           </Col>
         </Row>
       </Container>
-      <Col className="py-5 bg-culture">
+      <Col className="py-6 bg-culture">
         <Typography
           variant="h3"
           component="h2"

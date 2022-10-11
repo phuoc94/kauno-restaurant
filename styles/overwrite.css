@@ -3,8 +3,17 @@
 }
 
 .px-6 {
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+}
+.px-7 {
   padding-left: 5rem !important;
   padding-right: 5rem !important;
+}
+
+.py-6 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
 }
 
 @media only screen and (max-width: 767px) {
