@@ -32,47 +32,61 @@ export default function AboutUs() {
             <Typography
               variant="h3"
               component="h2"
-              className="text-uppercase font-classique-saigon color-primary text-center"
+              className="text-uppercase font-classique-saigon color-primary text-center pb-5"
             >
               KEITÄ OLEMME?
             </Typography>
-            <Typography variant="h6" component="p" className="text-center py-2">
-              Vuonna 2014 perustettu ja{' '}
-              <span className="font-weight-900 color-d-sienna">
-                Hämeenlinnassa
-              </span>
-              , toimiva rakas Kaunomme missio on tajota aasialaista, erityisesti
-              Vietnamilaista ruokaa paikallisille.
-            </Typography>
-            <Typography variant="h6" component="p" className="text-center py-2">
-              Olemme erikoistuneet lämmittäviin ruokiin ja juomiin, joissa on
-              aasialaisia vaikutteita ja hienostuneisuutta, jotka ovat sekä
-              terveellisiä että hauskoja nauttia.
-            </Typography>
-            <Typography variant="h6" component="p" className="text-center py-2">
-              Tänne olet tervetullut ruokailemaan tai mukaan.
-            </Typography>
-            <Typography
-              variant="h6"
-              component="p"
-              className="text-center py-2 pb-3"
-            >
-              Tule kokeilemaan{' '}
-              <span className="font-weight-900 color-seal-brown">
-                ohdullista Pho-kulhoamme
-              </span>{' '}
-              tai{' '}
-              <span className="font-weight-900 color-primary">
-                virkistävää kevätrullaruokaa
-              </span>
-              tai yksinkertaisesti{' '}
-              <b>
-                <span className="font-weight-900 color-copper-red">
-                  kupillista bobamaitoteetä.
+            <div>
+              <Typography
+                variant="body1"
+                component="p"
+                className="text-center py-2 font-size-18"
+              >
+                Vuonna 2014 perustettu ja{' '}
+                <span className="font-weight-900 color-d-sienna">
+                  Hämeenlinnassa
                 </span>
-              </b>
-              .
-            </Typography>
+                , toimiva rakas Kaunomme missio on tajota aasialaista,
+                erityisesti Vietnamilaista ruokaa paikallisille.
+              </Typography>
+              <Typography
+                variant="body1"
+                component="p"
+                className="text-center py-2 font-size-18"
+              >
+                Olemme erikoistuneet lämmittäviin ruokiin ja juomiin, joissa on
+                aasialaisia vaikutteita ja hienostuneisuutta, jotka ovat sekä
+                terveellisiä että hauskoja nauttia.
+              </Typography>
+              <Typography
+                variant="body1"
+                component="p"
+                className="text-center py-2 font-size-18"
+              >
+                Tänne olet tervetullut ruokailemaan tai mukaan.
+              </Typography>
+              <Typography
+                variant="body1"
+                component="p"
+                className="text-center py-2 pb-3 font-size-18"
+              >
+                Tule kokeilemaan{' '}
+                <span className="font-weight-900 color-seal-brown">
+                  ohdullista Pho-kulhoamme
+                </span>{' '}
+                tai{' '}
+                <span className="font-weight-900 color-primary">
+                  virkistävää kevätrullaruokaa
+                </span>
+                tai yksinkertaisesti{' '}
+                <b>
+                  <span className="font-weight-900 color-copper-red">
+                    kupillista bobamaitoteetä.
+                  </span>
+                </b>
+                .
+              </Typography>
+            </div>
           </Col>
           <Col className="col-lg-2 	col-12">
             <Col className="d-flex align-items-end justify-content-end h-100 image">
@@ -91,19 +105,20 @@ export default function AboutUs() {
         </Typography>
         <Container>
           <Row className="mt-3">
-            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
+            <Col className="d-flex flex-column col-lg-4 col-12">
               <Image src={Fish} alt="fish" />
+
               <Typography
                 variant="h4"
                 component="h4"
-                className="text-center p-2"
+                className="text-center p-2 font-size-32"
               >
                 Ykköslaatua
               </Typography>
               <Typography
-                variant="h6"
+                variant="body1"
                 component="p"
-                className="text-center p-2"
+                className="text-center p-2 font-size-18"
               >
                 Tavoitteenamme on tuoda asiakkaillemme laadukasta ruokaa.
               </Typography>
@@ -114,14 +129,14 @@ export default function AboutUs() {
               <Typography
                 variant="h4"
                 component="h4"
-                className="text-center p-2"
+                className="text-center p-2 font-size-32"
               >
                 Kauden Vihannekset
               </Typography>
               <Typography
-                variant="h6"
+                variant="body1"
                 component="p"
-                className="text-center p-2"
+                className="text-center p-2 font-size-18"
               >
                 Tuoreet, sesongin kasvikset suomalaisilta maatiloilta ovat
                 täällä suosittuja.
@@ -133,14 +148,14 @@ export default function AboutUs() {
               <Typography
                 variant="h4"
                 component="h4"
-                className="text-center p-2"
+                className="text-center p-2 font-size-32"
               >
                 Tuore hedelmä
               </Typography>
               <Typography
-                variant="h6"
+                variant="body1"
                 component="p"
-                className="text-center p-2"
+                className="text-center p-2 font-size-18"
               >
                 Tuoreista hedelmistä tehdään upeita, virkistäviä juomia, jotka
                 piristävät päivääsi.

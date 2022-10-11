@@ -51,6 +51,14 @@ a {
   font-weight: 500;
 }
 
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-32 {
+  font-size: 32px;
+}
+
 .color-primary {
   color: #4e603e;
 }
