@@ -48,7 +48,7 @@ a {
 .font-classique-saigon {
   //font-family: 'ClassiqueSaigon';
   font-family: 'Montserrat' !important;
-  font-weight: 500 !important;
+  font-weight: 500;
 }
 
 .color-primary {
@@ -72,6 +72,9 @@ a {
 
 .font-weight-bold {
   font-weight: bold !important;
+}
+.font-weight-700 {
+  font-weight: 700 !important;
 }
 
 .font-italic {
