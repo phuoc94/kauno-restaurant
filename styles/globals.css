@@ -93,7 +93,7 @@ a {
   font-weight: 900;
 }
 .mt-170 {
-  margin-top: 170px;
+  margin-top: 170px !important;
 }
 .button-primary {
   font-family: 'Montserrat';

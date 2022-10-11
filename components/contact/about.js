@@ -12,11 +12,11 @@ const ContactAbout = () => {
           <Col lg={5} className="contact-about-image">
             <Image src={Img} alt="bg-image" />
           </Col>
-          <Col lg={7} md={12} className="p-5">
+          <Col lg={7} md={12} className="p-5 mt-170">
             <Typography
               variant="h3"
               component="h3"
-              className="font-classique-saigon color-seal-brown text-center font-weight-700 mt-170"
+              className="font-classique-saigon color-seal-brown text-center font-weight-700 "
             >
               The Little Viet Kitchen
             </Typography>
