@@ -54,12 +54,12 @@ const CustomNavbar = () => {
           </Navbar.Collapse>
           <div className="text-center d-none d-xl-block">
             <Link href="/contact-us">
-              <button className="button-secondary text-uppercase text-nowrap py-3 p-2 m-1 button">
+              <button className="button-secondary text-uppercase text-nowrap py-3 p-2 mx-2 button">
                 <span className="h4 font-300 text-center">Ota yhteyttä</span>
               </button>
             </Link>
             <Link href="/contact-us#reservation">
-              <button className="button-primary text-uppercase text-nowrap py-3 p-2 m-1 button">
+              <button className="button-primary text-uppercase text-nowrap py-3 p-2 mx-2 button">
                 <span className="h4 font-300 text-center">Varaa pöytä</span>
               </button>
             </Link>
