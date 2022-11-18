@@ -21,25 +21,21 @@ const CustomNavbar = () => {
             className="justify-content-center"
           >
             <Nav className="h3 font-300 color-primary text-center">
-              <Nav.Link as={Link} href="/" className="mx-1">
-                Etusivu
-              </Nav.Link>
-              <Nav.Link as={Link} href="/menu" className="mx-1">
-                Menu
-              </Nav.Link>
-              <Nav.Link as={Link} href="/about-us" className="mx-1">
-                Meistä
-              </Nav.Link>
-              <Nav.Link as={Link} href="/contact-us" className="mx-1 d-xl-none">
-                Ota yhteyttä
-              </Nav.Link>
-              <Nav.Link
-                as={Link}
-                href="/contact-us#reservation"
-                className="mx-1 d-xl-none"
-              >
-                Varaa pöytä
-              </Nav.Link>
+              <Link href="/" passHref>
+                <Nav.Link className="mx-1">Etusivu</Nav.Link>
+              </Link>
+              <Link href="/menu" passHref>
+                <Nav.Link className="mx-1">Menu</Nav.Link>
+              </Link>
+              <Link href="/about-us" passHref>
+                <Nav.Link className="mx-1"> Meistä</Nav.Link>
+              </Link>
+              <Link href="/contact-us" passHref>
+                <Nav.Link className="mx-1 d-xl-none">Ota yhteyttä</Nav.Link>
+              </Link>
+              <Link href="/contact-us#reservation" passHref>
+                <Nav.Link className="mx-1 d-xl-none">Varaa pöytä</Nav.Link>
+              </Link>
               {/*
               <NavDropdown title="EN" id="basic-nav-dropdown" className="mx-1">
                 <NavDropdown.Item href="#action/3.2">
