@@ -105,7 +105,7 @@ export default function AboutUs() {
         </Typography>
         <Container>
           <Row className="mt-3">
-            <Col className="d-flex flex-column col-lg-4 col-12">
+            <Col className="d-flex flex-column col-lg-4 col-12 mt-3">
               <Image src={Fish} alt="fish" />
 
               <Typography
@@ -123,7 +123,7 @@ export default function AboutUs() {
                 Tavoitteenamme on tuoda asiakkaillemme laadukasta ruokaa.
               </Typography>
             </Col>
-            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
+            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12 mt-3">
               <Image src={Carrot} alt="carrot" />
 
               <Typography
@@ -142,7 +142,7 @@ export default function AboutUs() {
                 täällä suosittuja.
               </Typography>
             </Col>
-            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
+            <Col className="d-flex flex-column col-lg-4 col-12 mt-3">
               <Image src={Lime} alt="lime" />
 
               <Typography
