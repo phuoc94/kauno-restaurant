@@ -46,8 +46,8 @@ export default function AboutUs() {
                 <span className="font-weight-900 color-d-sienna">
                   Hämeenlinnassa
                 </span>
-                , toimiva rakas Kaunomme missio on tajota aasialaista,
-                erityisesti Vietnamilaista ruokaa paikallisille.
+                , toimiva rakas Kaunomme missio on tarjota aasialaista,
+                eritysesti Vietnamilaista ruokaa paikallisille.
               </Typography>
               <Typography
                 variant="body1"
@@ -63,7 +63,7 @@ export default function AboutUs() {
                 component="p"
                 className="text-center py-2 font-size-18"
               >
-                Tänne olet tervetullut ruokailemaan tai mukaan.
+                Tänne olet aina tervetullut ruokailemaan.
               </Typography>
               <Typography
                 variant="body1"
@@ -72,7 +72,7 @@ export default function AboutUs() {
               >
                 Tule kokeilemaan{' '}
                 <span className="font-weight-900 color-seal-brown">
-                  ohdullista Pho-kulhoamme
+                  Lohdullista Pho-kulhoamme
                 </span>{' '}
                 tai{' '}
                 <span className="font-weight-900 color-primary">

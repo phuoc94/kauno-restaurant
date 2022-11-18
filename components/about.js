@@ -20,7 +20,7 @@ const AboutSection = () => {
               <p className="about-text mt-3">
                 Rakas Kaunomme sijaitsee{' '}
                 <span className="color-d-sienna font-weight-bold">
-                  Hämeenlinnan keskuksessä.
+                  Hämeenlinnan keskustassa.
                 </span>
                 Tarjoamme lämmittäviä ruokia aasialaisten kulttuurien ja
                 hienostuneisuuden kanssa. Tule nauttimaan lohduttavasta{' '}
