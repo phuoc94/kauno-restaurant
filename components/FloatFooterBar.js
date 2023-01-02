@@ -9,11 +9,11 @@ const FloatFooterBar = () => {
         <Container className="d-flex justify-content-between align-items-center">
           <h2 className="color-d-sienna m-0">Varaa etukäteen</h2>
           <button
-            className="button-primary text-uppercase text-nowrap"
+            className="button-primary text-uppercase text-nowrap py-3"
             data-glf-cuid="1f9b655f-fd45-4b5d-9cb4-30d6d24fb65d"
             data-glf-ruid="bd207f57-4862-4324-9bd5-b695ce16c038"
           >
-            <span className="button">Tilaa</span>
+            <span className="button h5">Tilaa</span>
           </button>
         </Container>
       </div>
