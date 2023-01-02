@@ -257,6 +257,10 @@ a {
   box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.2);
 }
 
+.float-footer-text {
+  font-size: 24px;
+}
+
 .pb-5rem {
   padding-bottom: 5rem !important;
 }
@@ -264,6 +268,10 @@ a {
 @media only screen and (max-width: 767px) {
   .hero-text {
     font-size: 2rem;
+  }
+
+  .float-footer-text {
+    font-size: 14px;
   }
 
   .button-primary {

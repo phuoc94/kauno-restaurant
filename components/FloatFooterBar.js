@@ -7,7 +7,9 @@ const FloatFooterBar = () => {
     <div className="float-footer-bar w-100">
       <div className="py-3 bg-culture">
         <Container className="d-flex justify-content-between align-items-center">
-          <h2 className="color-d-sienna m-0">Varaa etukäteen</h2>
+          <span className="color-d-sienna m-0 float-footer-text">
+            Varaa etukäteen
+          </span>
           <button
             className="button-primary text-uppercase text-nowrap"
             data-glf-cuid="1f9b655f-fd45-4b5d-9cb4-30d6d24fb65d"
