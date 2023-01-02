@@ -9,7 +9,7 @@ import Logo from '../public/assets/stickers.svg';
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container className="py-5">
+      <Container className="pt-5 pb-5rem">
         <Row>
           <Col className="align-self-center my-2" sm={12} md={6} lg={4}>
             <p className="m-0">
