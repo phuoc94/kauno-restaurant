@@ -1,5 +1,6 @@
 import CustomNavbar from './navbar';
 import Footer from './footer';
+import FloatFooterBar from './FloatFooterBar';
 
 export default function Layout({ children }) {
   return (
@@ -7,6 +8,7 @@ export default function Layout({ children }) {
       <CustomNavbar />
       <main>{children}</main>
       <Footer />
+      <FloatFooterBar />
     </>
   );
 }
