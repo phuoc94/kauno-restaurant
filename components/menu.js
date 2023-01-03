@@ -1,11 +1,40 @@
+import { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
 import { Container, Row, Col } from 'react-bootstrap';
-import menu from '../data/menu.json';
+import axios from 'axios';
 import Link from 'next/link';
 import MenuItem from './menuItem';
+import { API_URL } from '../utils/urls';
 
 const MenuSection = () => {
-  const main = menu.main;
+  const [main, setMain] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  async function getData() {
+    try {
+      const response = await axios.post(API_URL, {
+        query: `
+          query {
+            mains{
+              title
+              description
+              featured
+              price
+            }
+          }
+        `,
+      });
+
+      const data = response.data;
+      setMain(data.data.mains.filter((item) => item.featured));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="menu-section menu-bg">
       <Container>

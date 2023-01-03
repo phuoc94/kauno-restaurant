@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { API_URL } from '../../utils/urls';
 import { Typography } from '@mui/material';
 import { Col, Container, Row } from 'react-bootstrap';
 import menu from '../../data/menu.json';
@@ -7,7 +10,34 @@ import img from '../../public/assets/menu/2boba.svg';
 import bgimg from '../../public/assets/menu/WhiteVector.svg';
 
 const Drink = () => {
-  const drinks = menu.drink;
+  const [drinks, setMenu] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  async function getData() {
+    try {
+      const response = await axios.post(API_URL, {
+        query: `
+          query {
+            drinks{
+              title
+              description
+              featured
+              price
+            }
+          }
+        `,
+      });
+
+      const data = response.data;
+      setMenu(data.data.drinks);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="footer">
       <Container className="py-5">
