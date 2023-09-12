@@ -10,11 +10,13 @@ import Link from 'next/link';
 const CustomNavbar = () => {
   return (
     <>
-      <Navbar expand="xl">
-        <Container className="d-flex">
-          <Navbar.Brand as={Link} href="/">
-            <Image src={Logo} alt="logo" width={324} height={92} />
-          </Navbar.Brand>
+       <Navbar expand="xl">
+        <Container>
+          <Link href="/" passHref>
+            <Navbar.Brand className="row col-8 col-md-5 col-lg-3">
+              <Image src={Logo} alt="logo" />
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
