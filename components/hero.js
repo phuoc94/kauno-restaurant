@@ -7,12 +7,8 @@ const HeroSection = () => {
     <section>
       <Container fluid className="hero">
         <Row className="h-100">
-          <Col
-            lg={5}
-            md={12}
-            className="text-center d-flex align-items-center justify-content-center h-100"
-          >
-            <Col>
+          <Col className="text-center d-flex align-items-center justify-content-center h-100">
+            <Col style={{ maxWidth: '580px' }}>
               <h1 className="color-primary display-2 font-classique-saigon">
                 Tervetuloa pieneen Vietnamilaiseen keittiöön
               </h1>
@@ -23,8 +19,8 @@ const HeroSection = () => {
               </Link>
             </Col>
           </Col>
-          <Col lg={7} md={12} className="bg-home-hero-food" />
-          <Col />
+          <Col className="bg-home-hero-food d-none d-lg-flex" />
+          <Col className="d-none d-lg-flex" />
         </Row>
       </Container>
     </section>

@@ -6,11 +6,18 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from '../components/theme';
 function MyApp({ Component, pageProps }) {
   return (
-    <SSRProvider>
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </SSRProvider>
+    <>
+      <SSRProvider>
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </SSRProvider>
+      <script
+        src="https://www.fbgcdn.com/embedder/js/ewm2.js"
+        defer
+        async
+      ></script>
+    </>
   );
 }
 

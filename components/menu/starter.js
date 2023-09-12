@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Col, Container, Row } from 'react-bootstrap';
 import menu from '../../data/menu.json';
 import MenuItem from '../menuItem';
-import img from '../../public/assets/menu/lohiBowl.svg';
+import img from '../../public/assets/menu/starterbg.svg';
 
 const Starter = () => {
   const starters = menu.starter;

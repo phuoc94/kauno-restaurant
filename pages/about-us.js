@@ -46,8 +46,8 @@ export default function AboutUs() {
                 <span className="font-weight-900 color-d-sienna">
                   Hämeenlinnassa
                 </span>
-                , toimiva rakas Kaunomme missio on tajota aasialaista,
-                erityisesti Vietnamilaista ruokaa paikallisille.
+                , toimiva rakas Kaunomme missio on tarjota aasialaista,
+                eritysesti Vietnamilaista ruokaa paikallisille.
               </Typography>
               <Typography
                 variant="body1"
@@ -63,7 +63,7 @@ export default function AboutUs() {
                 component="p"
                 className="text-center py-2 font-size-18"
               >
-                Tänne olet tervetullut ruokailemaan tai mukaan.
+                Tänne olet aina tervetullut ruokailemaan.
               </Typography>
               <Typography
                 variant="body1"
@@ -72,7 +72,7 @@ export default function AboutUs() {
               >
                 Tule kokeilemaan{' '}
                 <span className="font-weight-900 color-seal-brown">
-                  ohdullista Pho-kulhoamme
+                  Lohdullista Pho-kulhoamme
                 </span>{' '}
                 tai{' '}
                 <span className="font-weight-900 color-primary">
@@ -105,7 +105,7 @@ export default function AboutUs() {
         </Typography>
         <Container>
           <Row className="mt-3">
-            <Col className="d-flex flex-column col-lg-4 col-12">
+            <Col className="d-flex flex-column col-lg-4 col-12 mt-3">
               <Image src={Fish} alt="fish" />
 
               <Typography
@@ -123,7 +123,7 @@ export default function AboutUs() {
                 Tavoitteenamme on tuoda asiakkaillemme laadukasta ruokaa.
               </Typography>
             </Col>
-            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
+            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12 mt-3">
               <Image src={Carrot} alt="carrot" />
 
               <Typography
@@ -142,7 +142,7 @@ export default function AboutUs() {
                 täällä suosittuja.
               </Typography>
             </Col>
-            <Col className="d-flex justify-content-center flex-column col-lg-4 col-12">
+            <Col className="d-flex flex-column col-lg-4 col-12 mt-3">
               <Image src={Lime} alt="lime" />
 
               <Typography

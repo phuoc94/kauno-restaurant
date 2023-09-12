@@ -10,7 +10,7 @@ const ContactAbout = () => {
       <Container>
         <Row className="vh-100 d-flex align-items-center">
           <Col lg={5} className="contact-about-image">
-            <Image src={Img} alt="bg-image" />
+            <Image src={Img} alt="bg-image" priority />
           </Col>
           <Col lg={7} md={12} className="p-5 mt-170">
             <Typography

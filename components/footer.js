@@ -3,12 +3,13 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { AiOutlineFacebook, AiOutlineInstagram } from 'react-icons/ai';
 import Image from 'next/image';
+import Link from 'next/link';
 import Logo from '../public/assets/stickers.svg';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container className="py-5">
+      <Container className="pt-5 pb-8rem">
         <Row>
           <Col className="align-self-center my-2" sm={12} md={6} lg={4}>
             <p className="m-0">
@@ -29,8 +30,12 @@ const Footer = () => {
             <FaPhoneAlt /> 0400415224 <br />
             <MdEmail /> kaunocafe@gmail.com
             <br />
-            <AiOutlineFacebook size={26} />
-            <AiOutlineInstagram size={26} />
+            <Link href="https://www.facebook.com/kaunokitchen/">
+              <AiOutlineFacebook size={26} role="button" />
+            </Link>
+            <Link href="https://www.instagram.com/kaunokitchen/">
+              <AiOutlineInstagram size={26} role="button" />
+            </Link>
           </Col>
           <Col
             className="d-flex justify-content-center justify-content-lg-end my-4"
