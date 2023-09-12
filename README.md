@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kauno Restaurant Landing Page
 
-## Getting Started
+Welcome to the Kauno Restaurant landing page project! This repository contains the code for a responsive restaurant landing page built with NextJS and Bootstrap. The page serves as an online presence for Kim Restaurant and offers features like a contact/reserve table form that uses EmailJS to send form details directly to the restaurant owner.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Contact and reserve table forms for user interaction.
+- Seamless integration of EmailJS to send form details to the restaurant owner's email.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- NextJS
+- Bootstrap
+- [EmailJS](https://www.emailjs.com/) for handling form submissions
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To run this project locally, follow these steps:
 
-## Learn More
+1. Clone this repository to your local machine: `git clone https://github.com/phuoc94/kauno-restaurant.git`
+2. Navigate to the project directory: `cd kauno-restaurant`
+3. Install the project dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. Open your browser and access the application at `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Simply access the deployed [Kauno Restaurant Landing Page](https://kauno-v2.vercel.app/) to explore the restaurant's menu and use the contact/reserve table forms. This landing page is fully responsive, ensuring an optimal viewing experience across various devices and screen sizes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Screenshots/Demo
 
-## Deploy on Vercel
+You can see a live version of this project at [Kauno Restaurant Landing Page](https://kauno-v2.vercel.app/).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact Information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you have any questions, suggestions, or issues related to this project, please feel free to contact us at <phuoc94@hotmail.fi>.
