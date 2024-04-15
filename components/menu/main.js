@@ -1,12 +1,41 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { API_URL } from '../../utils/urls';
 import { Typography } from '@mui/material';
 import Image from 'next/image';
 import { Col, Container, Row } from 'react-bootstrap';
-import menu from '../../data/menu.json';
 import MenuItem from '../menuItem';
 import img from '../../public/assets/menu/lohiBowl.svg';
 
 const Main = () => {
-  const mains = menu.main;
+  const [mains, setMains] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  async function getData() {
+    try {
+      const response = await axios.post(API_URL, {
+        query: `
+          query {
+            mains{
+              title
+              description
+              featured
+              price
+            }
+          }
+        `,
+      });
+
+      const data = response.data;
+      setMains(data.data.mains);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="menu-main">
       <Container className="py-5">

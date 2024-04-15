@@ -1,10 +1,39 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { API_URL } from '../../utils/urls';
 import { Typography } from '@mui/material';
-import { Col, Container, Row } from 'react-bootstrap';
-import menu from '../../data/menu.json';
+import { Container, Row } from 'react-bootstrap';
 import MenuItem from '../menuItem';
 
 const Vegan = () => {
-  const vegans = menu.vegan;
+  const [vegans, setMenu] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  async function getData() {
+    try {
+      const response = await axios.post(API_URL, {
+        query: `
+          query {
+            vegans{
+              title
+              description
+              featured
+              price
+            }
+          }
+        `,
+      });
+
+      const data = response.data;
+      setMenu(data.data.vegans);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="bg-culture">
       <Container className="py-5">
