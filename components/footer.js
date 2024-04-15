@@ -8,7 +8,7 @@ import { AiOutlineFacebook, AiOutlineInstagram } from "react-icons/ai";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-import Logo from "../public/assets/stickers.svg";
+import Logo from "../public/assets/oiva_logoteksti_rgb.png";
 import { API_URL } from "../utils/urls";
 
 const Footer = () => {
@@ -72,7 +72,15 @@ const Footer = () => {
             sm={12}
             md={12}
             lg={4}>
-            <Image src={Logo} alt="logo" width={162} height={162} />
+            <Link href="https://www.oivahymy.fi/hae-yrityksia/#text=Kauno%20Kitchen">
+              <Image
+                src={Logo}
+                alt="logo"
+                width={300}
+                height={110}
+                style={{ cursor: "pointer" }}
+              />
+            </Link>
           </Col>
         </Row>
       </Container>
