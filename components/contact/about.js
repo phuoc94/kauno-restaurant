@@ -1,9 +1,42 @@
-import { Container, Row, Col } from 'react-bootstrap';
-import { Typography } from '@mui/material';
-import Image from 'next/image';
-import Img from '../../public/assets/contactus/Hero-ContactUs.svg';
+import { useEffect, useState } from "react";
+
+import axios from "axios";
+import Image from "next/image";
+import { Col, Container, Row } from "react-bootstrap";
+
+import { Typography } from "@mui/material";
+
+import Img from "../../public/assets/contactus/Hero-ContactUs.svg";
+import { API_URL } from "../../utils/urls";
 
 const ContactAbout = () => {
+  const [openingHours, setOpeningHours] = useState([]);
+
+  useEffect(() => {
+    getOpeningHours();
+  }, []);
+
+  async function getOpeningHours() {
+    try {
+      const response = await axios.post(API_URL, {
+        query: `
+          query {
+            openingTimes(orderBy: weekdayNumber_ASC) {
+              weekdayNumber
+              day
+              openingHour
+            }
+          }
+        `,
+      });
+
+      const data = response.data;
+      setOpeningHours(data.data.openingTimes);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <Container fluid>
       <Col className="contact-about bg-contact-about-image"></Col>
@@ -16,8 +49,7 @@ const ContactAbout = () => {
             <Typography
               variant="h3"
               component="h3"
-              className="font-classique-saigon color-seal-brown text-center font-weight-700 "
-            >
+              className="font-classique-saigon color-seal-brown text-center font-weight-700 ">
               The Little Viet Kitchen
             </Typography>
 
@@ -26,31 +58,19 @@ const ContactAbout = () => {
                 <Typography
                   variant="h5"
                   component="h3"
-                  className="d-flex justify-content-between"
-                >
+                  className="d-flex justify-content-between">
                   <span className="font-weight-bold">Aukioloaika</span>
-                  <span>Ma - La</span>
                 </Typography>
               </Col>
             </Row>
             <Row className="dashed-bottom py-3">
-              <Col>
-                <b>Ma-Ti</b>
-                <br />
-                10.00 - 17.30
-              </Col>
-              <Col className="text-center">
-                <b>Ke-Pe</b>
-                <br />
-                10.00 - 20.00
-              </Col>
-              <Col className="d-flex justify-content-end">
-                <span>
-                  <b>La</b>
-                  <br />
-                  11.00 - 17.30
-                </span>
-              </Col>
+              {openingHours &&
+                openingHours.map((item, index) => (
+                  <Col key={index} className="d-flex justify-content-between">
+                    <span className="font-weight-bold">{item.day}</span>
+                    <span>{item.openingHour}</span>
+                  </Col>
+                ))}
             </Row>
             <Row className="py-3">
               <Col>
@@ -58,14 +78,13 @@ const ContactAbout = () => {
                 <br />
                 <a
                   href="mailto:kaunocafe@gmail.com"
-                  className="text-decoration-none"
-                >
+                  className="text-decoration-none">
                   <span className="color-primary font-weight-bold">
                     kaunocafe@gmail.com
                   </span>
                 </a>
                 <br />
-                tai puhelimitse{' '}
+                tai puhelimitse{" "}
                 <a href="tel:+358400415224" className="text-decoration-none">
                   <span className="color-primary font-weight-bold">
                     0400415224
@@ -77,8 +96,7 @@ const ContactAbout = () => {
                 <br />
                 <a
                   href="https://goo.gl/maps/jS1BLFLHtYHxQuTM8"
-                  className="text-decoration-none"
-                >
+                  className="text-decoration-none">
                   <span className="color-primary font-weight-bold">
                     Hallituskatu 22, 13100 Hämeenlinna
                   </span>
@@ -93,3 +111,4 @@ const ContactAbout = () => {
 };
 
 export default ContactAbout;
+
