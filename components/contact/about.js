@@ -58,19 +58,21 @@ const ContactAbout = () => {
                 <Typography
                   variant="h5"
                   component="h3"
-                  className="d-flex justify-content-between">
+                  className="d-flex justify-content-center">
                   <span className="font-weight-bold">Aukioloaika</span>
                 </Typography>
               </Col>
             </Row>
-            <Row className="dashed-bottom py-3">
-              {openingHours &&
-                openingHours.map((item, index) => (
-                  <Col key={index} className="d-flex justify-content-between">
-                    <span className="font-weight-bold">{item.day}</span>
-                    <span>{item.openingHour}</span>
-                  </Col>
-                ))}
+            <Row className="dashed-bottom py-3 text-center">
+              <div className="grid">
+                {openingHours &&
+                  openingHours.map((item, index) => (
+                    <Col key={index} className="justify-content-between">
+                      <span className="font-weight-bold">{item.day}</span>
+                      <span>{item.openingHour}</span>
+                    </Col>
+                  ))}
+              </div>
             </Row>
             <Row className="py-3">
               <Col>
