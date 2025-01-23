@@ -1,67 +1,70 @@
 import React, { useState } from 'react';
 
-import { Container, Row, Col } from 'react-bootstrap';
-
-import TextField from '@mui/material/TextField';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { TimePicker } from '@mui/x-date-pickers/TimePicker';
-
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Snackbar from '@mui/material/Snackbar';
-import Alert from './alert';
 import emailjs from 'emailjs-com';
-import { MdHomeWork } from 'react-icons/md';
+import {
+  Col,
+  Container,
+  Row,
+} from 'react-bootstrap';
 
-const defaultValues = {
-  date: new Date(),
-  email: '',
-  phone: '',
-  message: '',
-};
+import {
+  Box,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Snackbar,
+  TextField,
+  Typography,
+} from '@mui/material';
+import {
+  AdapterDayjs,
+  DatePicker,
+  LocalizationProvider,
+  TimePicker,
+} from '@mui/x-date-pickers/';
+
+import Alert from './alert';
 
 const Reservation = () => {
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState(null);
-  const [people, setPeople] = useState('');
-  const [formValues, setFormValues] = useState(defaultValues);
-  const [open, setOpen] = React.useState(false);
+  const [people, setPeople] = useState(2);
+  const [formValues, setFormValues] = useState({
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [open, setOpen] = useState(false);
   const [status, setStatus] = useState('');
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-
+    if (reason === 'clickaway') return;
     setOpen(false);
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormValues({
-      ...formValues,
+    setFormValues((prevValues) => ({
+      ...prevValues,
       [name]: value,
-    });
+    }));
   };
 
-  function sendEmail(e) {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const today = new Date();
-    let templateParams = {
-      date: !date.getDate()
-        ? `${date.$D}.${date.$M + 1}.${date.$y}`
-        : `${today.getDate()}.${today.getMonth() + 1}.${today.getFullYear()}`,
+
+    if (!date || !time || !people) {
+      setStatus('error');
+      setOpen(true);
+      return;
+    }
+
+    const templateParams = {
+      date: `${date.$D}.${date.$M + 1}.${date.$y}`,
       time: `${time.$H}:${time.$m}`,
       people,
-      email: formValues.email,
-      phone: formValues.phone,
-      message: formValues.message,
+      ...formValues,
     };
 
     emailjs
@@ -72,20 +75,22 @@ const Reservation = () => {
         process.env.NEXT_PUBLIC_USER_ID
       )
       .then(
-        (result) => {
+        () => {
           setStatus('success');
           setOpen(true);
-
-          console.log('contact form submitted', result.text);
         },
-        (error) => {
+        () => {
           setStatus('error');
           setOpen(true);
-          console.log(error.text);
         }
       );
+
     e.target.reset();
-  }
+    setFormValues({ email: '', phone: '', message: '' });
+    setPeople('');
+    setDate(new Date());
+    setTime(null);
+  };
 
   return (
     <Container className="py-5" id="reservation">
@@ -117,9 +122,7 @@ const Reservation = () => {
                 <DatePicker
                   label="Päivämäärä"
                   value={date}
-                  onChange={(newValue) => {
-                    setDate(newValue);
-                  }}
+                  onChange={setDate}
                   renderInput={(params) => (
                     <TextField {...params} className="w-100" required />
                   )}
@@ -130,9 +133,7 @@ const Reservation = () => {
                   label="Aika"
                   value={time}
                   ampm={false}
-                  onChange={(newValue) => {
-                    setTime(newValue);
-                  }}
+                  onChange={setTime}
                   renderInput={(params) => (
                     <TextField {...params} className="w-100" required />
                   )}
@@ -146,23 +147,12 @@ const Reservation = () => {
                   labelId="people-select-label"
                   id="people-select"
                   value={people}
-                  label="People"
-                  name="people"
-                  onChange={(e) => {
-                    setPeople(e.target.value);
-                  }}
-                  required
+                  label="Henkilöä"
+                  onChange={(e) => setPeople(e.target.value)}
                 >
-                  <MenuItem value={1}>1 Henkilöä</MenuItem>
-                  <MenuItem value={2}>2 Henkilöä</MenuItem>
-                  <MenuItem value={3}>3 Henkilöä</MenuItem>
-                  <MenuItem value={4}>4 Henkilöä</MenuItem>
-                  <MenuItem value={5}>5 Henkilöä</MenuItem>
-                  <MenuItem value={6}>6 Henkilöä</MenuItem>
-                  <MenuItem value={7}>7 Henkilöä</MenuItem>
-                  <MenuItem value={8}>8 Henkilöä</MenuItem>
-                  <MenuItem value={9}>9 Henkilöä</MenuItem>
-                  <MenuItem value={10}>10 Henkilöä</MenuItem>
+                  {[...Array(10).keys()].map((i) => (
+                    <MenuItem key={i + 1} value={i + 1}>{`${i + 1} Henkilöä`}</MenuItem>
+                  ))}
                 </Select>
               </FormControl>
             </Col>
@@ -173,7 +163,7 @@ const Reservation = () => {
                 variant="outlined"
                 type="email"
                 name="email"
-                value={formValues.name}
+                value={formValues.email}
                 onChange={handleInputChange}
                 required
               />
@@ -183,10 +173,9 @@ const Reservation = () => {
                 fullWidth
                 label="Puhelinumero"
                 variant="outlined"
-                placeholder="Puhelinumero"
                 type="tel"
                 name="phone"
-                value={formValues.name}
+                value={formValues.phone}
                 onChange={handleInputChange}
               />
             </Col>
@@ -194,12 +183,10 @@ const Reservation = () => {
               <TextField
                 label="Viesti"
                 fullWidth
-                id="outlined-multiline-static"
                 multiline
-                placeholder="Kirjoita tähän erityistoiveesi :)"
                 rows={4}
                 name="message"
-                value={formValues.name}
+                value={formValues.message}
                 onChange={handleInputChange}
               />
             </Col>
@@ -220,18 +207,14 @@ const Reservation = () => {
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={status} sx={{ width: '100%' }}>
           {status === 'success' ? (
-            <span>
-              Viestisi on lähetetty. Otamme sinuun yhteyttä mahdollisimman pian.
-            </span>
+            'Viestisi on lähetetty. Otamme sinuun yhteyttä mahdollisimman pian.'
           ) : (
-            <span>
-              Jotain meni pieleen. Yritä myöhemmin uudelleen tai ota meihin
-              yhteyttä suoraan.
-            </span>
+            'Jotain meni pieleen. Yritä myöhemmin uudelleen tai ota meihin yhteyttä suoraan.'
           )}
         </Alert>
       </Snackbar>
     </Container>
   );
 };
+
 export default Reservation;
