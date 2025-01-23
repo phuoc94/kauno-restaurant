@@ -8,6 +8,7 @@ import {
 } from 'react-bootstrap';
 
 import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -33,6 +34,7 @@ const Reservation = () => {
   });
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') return;
@@ -49,10 +51,12 @@ const Reservation = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     if (!date || !time || !people) {
       setStatus('error');
       setOpen(true);
+      setIsLoading(false);
       return;
     }
 
@@ -74,10 +78,12 @@ const Reservation = () => {
         () => {
           setStatus('success');
           setOpen(true);
+          setIsLoading(false);
         },
         () => {
           setStatus('error');
           setOpen(true);
+          setIsLoading(false);
         }
       );
 
@@ -120,7 +126,7 @@ const Reservation = () => {
                   value={date}
                   onChange={setDate}
                   renderInput={(params) => (
-                    <TextField {...params} className="w-100" required />
+                    <TextField {...params} className="w-100" required disabled={isLoading} />
                   )}
                 />
               </Col>
@@ -131,7 +137,7 @@ const Reservation = () => {
                   ampm={false}
                   onChange={setTime}
                   renderInput={(params) => (
-                    <TextField {...params} className="w-100" required />
+                    <TextField {...params} className="w-100" required disabled={isLoading} />
                   )}
                 />
               </Col>
@@ -145,6 +151,7 @@ const Reservation = () => {
                   value={people}
                   label="Henkilöä"
                   onChange={(e) => setPeople(e.target.value)}
+                  disabled={isLoading}
                 >
                   {[...Array(10).keys()].map((i) => (
                     <MenuItem key={i + 1} value={i + 1}>{`${i + 1} Henkilöä`}</MenuItem>
@@ -162,6 +169,7 @@ const Reservation = () => {
                 value={formValues.email}
                 onChange={handleInputChange}
                 required
+                disabled={isLoading}
               />
             </Col>
             <Col className="col-12 col-md-6 p-2">
@@ -173,6 +181,7 @@ const Reservation = () => {
                 name="phone"
                 value={formValues.phone}
                 onChange={handleInputChange}
+                disabled={isLoading}
               />
             </Col>
             <Col className="col-12 p-2">
@@ -184,6 +193,7 @@ const Reservation = () => {
                 name="message"
                 value={formValues.message}
                 onChange={handleInputChange}
+                disabled={isLoading}
               />
             </Col>
           </Row>
@@ -192,8 +202,13 @@ const Reservation = () => {
               <button
                 className="button-primary mt-4 text-nowrap py-3"
                 type="submit"
+                disabled={isLoading}
               >
-                <span className="h4 text-uppercase font-300">Varaa pöytä</span>
+                {isLoading ? (
+                  <CircularProgress size={24} />
+                ) : (
+                  <span className="h4 text-uppercase font-300">Varaa pöytä</span>
+                )}
               </button>
             </Col>
           </Row>
