@@ -110,13 +110,7 @@ const Reservation = () => {
           </Typography>
         </Col>
       </Row>
-      {status === 'success' ? (
-        <Box className="rsv-box d-flex justify-content-center align-items-center">
-          <Typography variant="h5" component="h3">
-            Viestisi on lähetetty. Otamme sinuun yhteyttä mahdollisimman pian.
-          </Typography>
-        </Box>
-      ) : (
+    
         <Box component="form" onSubmit={sendEmail}>
           <Row>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -213,7 +207,6 @@ const Reservation = () => {
             </Col>
           </Row>
         </Box>
-      )}
 
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={status} sx={{ width: '100%' }}>
