@@ -7,21 +7,9 @@ import {
   Row,
 } from 'react-bootstrap';
 
-import Box from '@mui/material/Box';
-import CircularProgress from '@mui/material/CircularProgress';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import Snackbar from '@mui/material/Snackbar';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 
-import Alert from './alert';
+import Quandoo from './quandoo';
 
 const Reservation = () => {
   const [date, setDate] = useState(new Date());
@@ -110,7 +98,8 @@ const Reservation = () => {
           </Typography>
         </Col>
       </Row>
-    
+      <Quandoo  />
+     {/*
         <Box component="form" onSubmit={sendEmail}>
           <Row>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -216,7 +205,7 @@ const Reservation = () => {
             'Jotain meni pieleen. Yritä myöhemmin uudelleen tai ota meihin yhteyttä suoraan.'
           )}
         </Alert>
-      </Snackbar>
+      </Snackbar> */}
     </Container>
   );
 };
