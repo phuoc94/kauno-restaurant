@@ -10,7 +10,7 @@ export default function Quandoo() {
                 data-merchant-id="105452"
                 data-theme="light"
                 data-primary-color="4f603d"
-                strategy="lazyOnload"
+                strategy="afterInteractive"
             />
 
         </section>
